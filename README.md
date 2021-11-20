@@ -32,7 +32,7 @@ This is a repo containing datasets and baselines for benchmarking Chinese text r
 - [ ] Add description for the datasets （**Jianqi Ma**）
 - [ ] Fix the experiment settings, e.g., dataset division, input size, etc. (**Jingye Chen**)
 - [ ] Complete a series of baselines (**All**)
-- [ ] Analyze the difference between Chinese texts and English texts
+- [ ] Analyze the difference between Chinese texts and English texts（**Xixi Xu**）
 - [ ] Write a paper, and publish it at arXiv!!!
 
 ## Reference

@@ -69,12 +69,11 @@ Please cite the following paper if you are using the code/model in your research
 to be filled
 ```
 
-## Teammates
-Jingye Chen, Mengnan Guan, Haiyang Yu, Shaobo Qu, Xiaocong Wang, Xixi Xu, Jianqi Ma
-
-Advisors: Prof. Bin Li and Prof. Xiangyang Xue
 
 ## Copyright
+The team includes Jingye Chen **(Leader)**, Mengnan Guan, Haiyang Yu, Shaobo Qu, Xiaocong Wang, Xixi Xu, and Jianqi Ma, advised by Prof. Bin Li and Prof. Xiangyang Xue.
+
 Copyright © 2021 Fudan-FudanVI. All Rights Reserved.
 
+![Alt text](./images/logo.png)
 

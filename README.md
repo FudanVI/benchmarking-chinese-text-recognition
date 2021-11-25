@@ -41,23 +41,23 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 
 
 ## References
-[1] Yuan T L, Zhu Z, Xu K, et al. A large chinese text dataset in the wild[J]. Journal of Computer Science and Technology, 2019. [paper]()
+[1] Yuan T L, Zhu Z, Xu K, et al. A large chinese text dataset in the wild. Journal of Computer Science and Technology, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90CTW%E3%80%91(JCS2019)A%20Large%20Chinese%20Text%20Dataset%20in%20the%20Wild.pdf)
 
-[2] Chng C K, Liu Y, Sun Y, et al. ICDAR2019 robust reading challenge on arbitrary-shaped text-RRC-ArT[C]. ICDAR, 2019. [paper]()
+[2] Chng C K, Liu Y, Sun Y, et al. ICDAR2019 robust reading challenge on arbitrary-shaped text-RRC-ArT. ICDAR, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90ArT%E3%80%91(ICDAR2019)ICDAR2019%20Robust%20Reading%20Challenge%20on%20Arbitrary-Shaped%20Text%20-%20RRC-ArT.pdf)
 
-[3] Sun Y, Ni Z, Chng C K, et al. ICDAR 2019 competition on large-scale street view text with partial labeling-RRC-LSVT[C]. ICDAR, 2019. [paper]()
+[3] Sun Y, Ni Z, Chng C K, et al. ICDAR 2019 competition on large-scale street view text with partial labeling-RRC-LSVT. ICDAR, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90LSVT%E3%80%91(ICDAR2019)ICDAR%202019%20Competition%20on%20Large-scale%20Street%20View%20Text%20with%20Partial%20Labeling%20-%20RRC-LSVT.pdf)
 
-[4] Shi B, Yao C, Liao M, et al. ICDAR2017 competition on reading chinese text in the wild (RCTW-17)[C]. ICDAR, 2017. [paper]()
+[4] Shi B, Yao C, Liao M, et al. ICDAR2017 competition on reading chinese text in the wild (RCTW-17). ICDAR, 2017. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90RCTW%E3%80%91(ICDAR2017)ICDAR2017%20Competition%20on%20Reading%20Chinese%20Text%20in%20the%20Wild%20(RCTW-17).pdf)
 
-[5] Zhang R, Zhou Y, Jiang Q, et al. Icdar 2019 robust reading challenge on reading chinese text on signboard[C]. ICDAR, 2019. [paper]()
+[5] Zhang R, Zhou Y, Jiang Q, et al. Icdar 2019 robust reading challenge on reading chinese text on signboard. ICDAR, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90ReCTS%E3%80%91(ICDAR2019)ICDAR%202019%20Robust%20Reading%20Challenge%20on%20Reading%20Chinese%20Text%20on%20Signboard.pdf)
 
-[6] He M, Liu Y, Yang Z, et al. ICPR2018 contest on robust reading for multi-type web images[C]. ICPR, 2018. [paper]()
+[6] He M, Liu Y, Yang Z, et al. ICPR2018 contest on robust reading for multi-type web images. ICPR, 2018. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Web/%E3%80%90MTWI%E3%80%91(ICPR2018)ICPR2018%20Contest%20on%20Robust%20Reading%20for%20Multi-Type%20Web%20Images.pdf)
 
-[7] Zhang H, Liang L, Jin L. SCUT-HCCDoc: A new benchmark dataset of handwritten Chinese text in unconstrained camera-captured documents[J]. Pattern Recognition, 2020. [paper]()
+[7] Zhang H, Liang L, Jin L. SCUT-HCCDoc: A new benchmark dataset of handwritten Chinese text in unconstrained camera-captured documents. Pattern Recognition, 2020. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Handwriting/%E3%80%90SCUT%E3%80%91(PR2020)SCUT-HCCDoc-%20A%20new%20benchmark%20dataset%20of%20handwritten%20Chinese%20text%20in%20unconstrained%20camera-captured%20documents.pdf)
 
-[8] Yin F, Wang Q F, Zhang X Y, et al. ICDAR 2013 Chinese handwriting recognition competition[C]. ICDAR, 2013. [paper]()
+[8] Yin F, Wang Q F, Zhang X Y, et al. ICDAR 2013 Chinese handwriting recognition competition. ICDAR, 2013. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Handwriting/%E3%80%90ICDAR2013%E3%80%91(ICDAR2013)ICDAR%202013%20Chinese%20Handwriting%20Recognition%20Competition%20.pdf)
 
-[9] Liu C L, Yin F, Wang D H, et al. CASIA online and offline Chinese handwriting databases[C]. ICDAR, 2011. [paper]()
+[9] Liu C L, Yin F, Wang D H, et al. CASIA online and offline Chinese handwriting databases. ICDAR, 2011. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Handwriting/%E3%80%90HWDB%E3%80%91(ICDAR2011)CASIA%20Online%20and%20Offline%20Chinese%20Handwriting%20Databases.pdf)
 
 [10] text_render: [https://github.com/Sanster/text_renderer](https://github.com/Sanster/text_renderer)
 

@@ -1,5 +1,5 @@
 # Benchmarking-Chinese-Text-Recognition
-This is a repository containing datasets and baselines for benchmarking Chinese text recognition. Please see the paper [link]() for more details regarding the dataset divisions and experiments.
+This is a repository containing datasets and baselines for benchmarking Chinese text recognition. Please see the [paper]() for more details regarding the dataset divisions and experiments.
 
 ## Updates
 Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to BaiduCloud.

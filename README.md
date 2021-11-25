@@ -10,6 +10,7 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 - [ ] Fix the experiment settings, e.g., dataset division, input size, etc. (**Jingye Chen**)
 - [ ] Complete a series of baselines (**All**)
 - [ ] Analyze the difference between Chinese texts and English texts（**Xixi Xu**）
+- [ ] Train a model to provide the baseline, and publish the code and pre-trained weihgt ()
 - [ ] Write a paper, and publish it at arXiv!!!
 
 ## Datasets
@@ -61,9 +62,19 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 
 [10] text_render: [https://github.com/Sanster/text_renderer](https://github.com/Sanster/text_renderer)
 
+## Citation
+Please cite the following paper if you are using the code/model in your research paper.
 
+```
+to be filled
+```
 
 ## Teammates
 Jingye Chen, Mengnan Guan, Haiyang Yu, Shaobo Qu, Xiaocong Wang, Xixi Xu, Jianqi Ma
 
-Advisors: Bin Li and Xiangyang Xue
+Advisors: Prof. Bin Li and Prof. Xiangyang Xue
+
+## Copyright
+Copyright © 2021 Fudan-FudanVI. All Rights Reserved.
+
+

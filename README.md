@@ -33,19 +33,19 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 
 ## Model List
 <table><tbody>
-    <tr>
+    <tr bgcolor="#CCCCCC">
         <th rowspan="2">&nbsp;&nbsp;Method&nbsp;&nbsp;</th>
         <th rowspan="2">&nbsp;&nbsp;Source&nbsp;&nbsp;</th>
         <th rowspan="2">&nbsp;&nbsp;Time&nbsp;&nbsp;</th>
         <th colspan="4">Dataset</th>
     </tr>
-    <tr>
+    <tr bgcolor="#CCCCCC">
         <th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scene&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
         <th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
         <th align="center">&nbsp;&nbsp;Document&nbsp;&nbsp;</th>
         <th align="center">&nbsp;Handwriting&nbsp;</th>
     </tr>
-    <tr bgcolor="#CCCCCC">
+    <tr>
         <td align="center">CRNN [13]</td>
         <td align="center">TPAMI</td>
         <td align="center">2016</td>
@@ -54,7 +54,7 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <td align="center">93.4</td>
         <td align="center">ing</td>
     </tr>
-    <tr>
+    <tr bgcolor="#CCCCCC">
         <td align="center">MORAN [14]</td>
         <td align="center">PR</td>
         <td align="center">2019</td>
@@ -63,7 +63,7 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <td align="center">95.6</td>
         <td align="center">ing</td>
     </tr>
-    <tr bgcolor="#CCCCCC">
+    <tr>
         <td align="center">SEED [15]</td>
         <td align="center">CVPR</td>
         <td align="center">2020</td>
@@ -72,7 +72,7 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <td align="center">92.3</td>
         <td align="center">ing</td>
     </tr>
-    <tr>
+    <tr  bgcolor="#CCCCCC">
         <td align="center">SRN [16]</td>
         <td align="center">CVPR</td>
         <td align="center">2020</td>

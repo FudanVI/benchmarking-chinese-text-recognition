@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/Team-FudanVI-red) ![](https://img.shields.io/badge/Maintained-Yes-green) ![](https://img.shields.io/badge/License-MIT-blue)
 
 
-This repository contains datasets and baselines for benchmarking Chinese text recognition. Please see the corresponding [paper]() for more details regarding the dataset divisions and experiments.
+This repository contains datasets and baselines for benchmarking Chinese text recognition. Please see the corresponding [paper]() for more details regarding the dataset divisions, experiments, etc.
 
 
 ## Updates
@@ -32,12 +32,21 @@ Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make 
 
 ## Datasets
 ![Alt text](./images/dataset.png)
-The above image demonstrates the four settings used in our benchmark including *scene*, *web*, *document*, and *handwriting* settings, each of which will be introduced next.
+The above image demonstrates the four settings used in our benchmark including *Scene*, *Web*, *Document*, and *Handwriting* settings, each of which will be detailed next.
 
-- ### Scene Setting
-- ### Web Setting
-- ### Document Setting
-- ### Handwriting Setting
+###Scene Setting
+We first collect the publicly available scene datasets including *RCTW*, *ReCTS*, *LSVT*, *ArT*, *CTW* resulting in 636,455 samples, which are randomly shuffled and then divided at a ratio of 8:1:1 to construct the training, validation, and testing datasets. Details of each scene datasets are introduced as follows:\
+- RCTW [] : 
+- ReCTS [] :
+- LSVT [] :
+- ArT [] :
+- CTW [] :
+
+### Web Setting
+
+### Document Setting
+
+### Handwriting Setting
 
 
 

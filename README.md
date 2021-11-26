@@ -128,6 +128,15 @@ Overall, the samples size for each dataset is shown as follows:
         <td align="center">93.4</td>
         <td align="center">ing</td>
     </tr>
+    <tr>
+        <td align="center">ASTER [x]</td>
+        <td align="center">TPAMI</td>
+        <td align="center">2018</td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_scene.txt" style="color:black;">54.1</a></td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_web.txt" style="color:black;">52.0</a></td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_document.txt" style="color:black;">92.9</a></td>
+        <td align="center">ing</td>
+    </tr>
     <tr bgcolor="#CCCCCC">
         <td align="center">MORAN [12]</td>
         <td align="center">PR</td>
@@ -141,9 +150,9 @@ Overall, the samples size for each dataset is shown as follows:
         <td align="center">SEED [13]</td>
         <td align="center">CVPR</td>
         <td align="center">2020</td>
-        <td align="center">49.2</td>
-        <td align="center">46.0</td>
-        <td align="center">92.3</td>
+        <td align="center"><a href="./predictions/SEED/SEED_scene.txt" style="color:black;">49.2</a></td>
+        <td align="center"><a href="./predictions/SEED/SEED_web.txt" style="color:black;">46.0</a></td>
+        <td align="center"><a href="./predictions/SEED/SEED_document.txt" style="color:black;">93.6</a></td>
         <td align="center">ing</td>
     </tr>
     <tr  bgcolor="#CCCCCC">

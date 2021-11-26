@@ -35,21 +35,74 @@ Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make 
 The above image demonstrates the four settings used in our benchmark including *Scene*, *Web*, *Document*, and *Handwriting* settings, each of which will be detailed next.
 
 ### Scene Setting
-We first collect the publicly available scene datasets including *RCTW*, *ReCTS*, *LSVT*, *ArT*, *CTW* resulting in 636,455 samples, which are randomly shuffled and then divided at a ratio of 8:1:1 to construct the training, validation, and testing datasets. Details of each scene datasets are introduced as follows:
-- RCTW [] : 
-- ReCTS [] :
-- LSVT [] :
-- ArT [] :
-- CTW [] :
+We first collect the publicly available scene datasets including **RCTW**, **ReCTS**, **LSVT**, **ArT**, **CTW** resulting in 636,455 samples, which are randomly shuffled and then divided at a ratio of 8:1:1 to construct the training, validation, and testing datasets. Details of each scene datasets are introduced as follows:
+- **RCTW** [] : 
+- **ReCTS** [] :
+- **LSVT** [] :
+- **ArT** [] :
+- **CTW** [] :
 
 ### Web Setting
-We collect the web text images from the [ICPR-MTWI Competition](https://tianchi.aliyun.com/competition/entrance/231684/information) held in 2018. Since the labels for the testing dataset are not available, we randomly shuffle the training cropped text images and divide it at a ratio of 8:1:1 to construct the training, validation, and testing datasets. MTWI [] is xxx ...
+We collect the web text images from the [ICPR-MTWI Competition](https://tianchi.aliyun.com/competition/entrance/231684/information) held in 2018. Since the labels for the testing dataset are not available, we randomly shuffle the training cropped text images and divide it at a ratio of 8:1:1 to construct the training, validation, and testing datasets. **MTWI** [] is xxx ...
 
 ### Document Setting
-Since there 
+Since there does not exist any suitable publicly available document text datasets, we manually construct **Document50k** using the text render [x]. The text render ... We collect the corpus from ... The length of each text ... 
 
 ### Handwriting Setting
+We utilize the **SCUT-HCCDoc** [x] dataset for this setting. The original SCUT-HCCDoc contains 93,254 samples for training and 23,389 for testing. To fairly evaluate the effectiveness of the baselines, we choose the last 13,254 samples in the original training dataset for validation. The SCUT-HCCDoc is xxx ...
 
+
+Overall, the samples size for each dataset is shown as follows:
+<table><tbody>
+    <tr bgcolor="#CCCCCC">
+        <th>&nbsp;&nbsp;Setting&nbsp;&nbsp;</th>
+        <th>&nbsp;&nbsp;Dataset&nbsp;&nbsp;</th>
+        <th>&nbsp;&nbsp;Sample Size&nbsp;&nbsp;</th>
+        <th>&nbsp;&nbsp;Setting&nbsp;&nbsp;</th>
+        <th>&nbsp;&nbsp;Dataset&nbsp;&nbsp;</th>
+        <th>&nbsp;&nbsp;Sample Size&nbsp;&nbsp;</th>
+    </tr>
+    <tr>
+        <td rowspan="3" align="center">Scene</td>
+        <td align="center">Training</td>
+        <td align="center">509,164</td>
+        <td rowspan="3" align="center">Web</td>
+        <td align="center">Training</td>
+        <td align="center">112,471</td>
+    </tr>
+    <tr>
+        <td align="center">Validation</td>
+        <td align="center">63,645</td>
+        <td align="center">Validation</td>
+        <td align="center">14,059</td>
+    </tr>
+    <tr>
+        <td align="center">Testing</td>
+        <td align="center">63,645</td>
+        <td align="center">Testing</td>
+        <td align="center">14,059</td>
+    </tr>
+    <tr>
+        <td rowspan="3" align="center">Document</td>
+        <td align="center">Training</td>
+        <td align="center">400,000</td>
+        <td rowspan="3" align="center">Handwriting</td>
+        <td align="center">Training</td>
+        <td align="center">80,000</td>
+    </tr>
+    <tr>
+        <td align="center">Validation</td>
+        <td align="center">50,000</td>
+        <td align="center">Validation</td>
+        <td align="center">13,254</td>
+    </tr>
+    <tr>
+        <td align="center">Testing</td>
+        <td align="center">50,000</td>
+        <td align="center">Testing</td>
+        <td align="center">23,389</td>
+    </tr>
+</table>
 
 
 ## Baselines
@@ -150,4 +203,3 @@ The team includes Jingye Chen **(Leader)**, Mengnan Guan, Haiyang Yu, Shaobo Qu,
 Copyright © 2021 Fudan-FudanVI. All Rights Reserved.
 
 ![Alt text](./images/logo.png)
-

@@ -32,6 +32,13 @@ Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make 
 
 ## Datasets
 ![Alt text](./images/dataset.png)
+The above image demonstrates the four settings used in our benchmark including *scene*, *web*, *document*, and *handwriting* settings, each of which will be introduced next.
+
+- ### Scene Setting
+- ### Web Setting
+- ### Document Setting
+- ### Handwriting Setting
+
 
 
 ## Baselines

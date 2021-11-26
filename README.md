@@ -8,11 +8,11 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 
 ## Todo List
 - [x] Upload related datasets to BaiduCloud and Google Drive.
-- [ ] Add description for the datasets （**Jianqi Ma**）
+- [ ] Add description for the datasets (**Jianqi Ma**)
 - [ ] Fix the experiment settings, e.g., dataset division, input size, etc. (**Jingye Chen**)
 - [ ] Complete a series of baselines (**All**)
-- [ ] Analyze the difference between Chinese texts and English texts（**Xixi Xu**）
-- [ ] Train a model to provide the baseline, and publish the code and pre-trained weihgt ()
+- [ ] Analyze the difference between Chinese texts and English texts(**Xixi Xu**)
+- [ ] Train a model to provide the baseline, and publish the code and pre-trained weihgt (**TBD**)
 - [ ] Write a paper, and publish it at arXiv!!!
 
 ## Download
@@ -86,9 +86,9 @@ Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make 
         <td align="center">SRN [14]</td>
         <td align="center">CVPR</td>
         <td align="center">2020</td>
-        <td align="center">59.2</td>
-        <td align="center">49.7</td>
-        <td align="center">96.1</td>
+        <td align="center"><a href="./predictions/SRN/SRN_scene.txt" style="color:black;">59.2</a></td>
+        <td align="center"><a href="./predictions/SRN/SRN_web.txt" style="color:black;">49.7</a></td>
+        <td align="center"><a href="./predictions/SRN/SRN_document.txt" style="color:black;">96.1</a></td>
         <td align="center">ing</td>
     </tr>
 </table>

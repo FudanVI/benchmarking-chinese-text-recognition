@@ -4,8 +4,6 @@ This is a repository containing datasets and baselines for benchmarking Chinese 
 ## Updates
 Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to BaiduCloud.
 
-## Download
-
 ## Todo List
 - [ ] Upload related datasets to BaiduCloud and Google Drive （**Jingye Chen**）
 - [ ] Add description for the datasets （**Jianqi Ma**）
@@ -14,6 +12,11 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 - [ ] Analyze the difference between Chinese texts and English texts（**Xixi Xu**）
 - [ ] Train a model to provide the baseline, and publish the code and pre-trained weihgt ()
 - [ ] Write a paper, and publish it at arXiv!!!
+
+## Download
+The lmdb datasets for four settings (scene/web/document/handwriting) are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm)
+
+
 
 ## Datasets
 ### Scene

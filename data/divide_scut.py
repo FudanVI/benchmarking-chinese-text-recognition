@@ -8,7 +8,7 @@ from PIL import Image
 # To build the testing dataset, please simply replace 'train' with 'test'
 json_root = './SCUT-HCCDoc_Dataset_Release_v2/hccdoc_train.json' # the path for hccdoc_train.json
 image_root = './SCUT-HCCDoc_Dataset_Release_v2/image' # the path for image directory
-save_root = './SCUT_train' # the path for saving images
+save_root = './SCUT_train' # the path for saving images, please create directory first
 
 f = open(json_root)
 results = json.load(f)

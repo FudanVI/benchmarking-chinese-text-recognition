@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/Team-FudanVI-red) ![](https://img.shields.io/badge/Maintained-Yes-green) ![](https://img.shields.io/badge/License-MIT-blue)
 
 
-This is a repository containing datasets and baselines for benchmarking Chinese text recognition. Please see the [paper]() for more details regarding the dataset divisions and experiments.
+This repository contains datasets and baselines for benchmarking Chinese text recognition. Please see the corresponding [paper]() for more details regarding the dataset divisions and experiments.
 
 
 ## Updates
@@ -20,7 +20,8 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 - [ ] Write a paper, and publish it at arXiv!!!
 
 ## Download
-The **lmdb** datasets for four benchmark settings (scene/web/document/handwriting) are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm) and [GoogleDrive](https://drive.google.com/drive/folders/1J-3klWJasVJTL32FOKaFXZykKwN6Wni5?usp=sharing).
+The **lmdb** datasets for three benchmark settings (scene/web/document) are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm) and [GoogleDrive](https://drive.google.com/drive/folders/1J-3klWJasVJTL32FOKaFXZykKwN6Wni5?usp=sharing).
+For the handwriting setting, please first download the dataset at [SCUT-HCCDoc](https://github.com/HCIILAB/SCUT-HCCDoc_Dataset_Release), then manually divide it according to XXX.
 
 The **lmdb** sub-datasets (RCTW/ReCTS/LSVT/ArT/CTW) used to construct the scene settings are available in [BaiduCloud](https://pan.baidu.com/s/1OSDNyb_6f1mJVtQad7SdhA) (psw:gkta) and [GoogleDrive](https://drive.google.com/drive/folders/1oYZPLjTADqmrS2cqeZgURhG2KT2sCCIh?usp=sharing).
 

@@ -32,16 +32,16 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 ## Model List
 <table><tbody>
     <tr>
-        <th rowspan="2">Method</th>
-        <th rowspan="2">Source</th>
-        <th rowspan="2">Time</th>
-        <th colspan="4" style="width:1000px">Dataset</th>
+        <th rowspan="2">&nbsp;&nbsp;Method&nbsp;&nbsp;</th>
+        <th rowspan="2">&nbsp;&nbsp;Source&nbsp;&nbsp;</th>
+        <th rowspan="2">&nbsp;&nbsp;Time&nbsp;&nbsp;</th>
+        <th colspan="4">Dataset</th>
     </tr>
     <tr>
-        <td align="center" style="width:250px">Scene</td>
-        <td align="center" style="width:250px">Web</td>
-        <td align="center" style="width:250px">Document</td>
-        <td align="center" style="width:250px">Handwriting</td>
+        <th align="center">&nbsp;&nbsp;&nbsp;&nbsp;Scene&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center">&nbsp;&nbsp;Document&nbsp;&nbsp;</th>
+        <th align="center">&nbsp;Handwriting&nbsp;</th>
     </tr>
     <tr>
         <td align="center">CRNN [x]</td>

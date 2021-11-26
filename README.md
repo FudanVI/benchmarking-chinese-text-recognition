@@ -14,7 +14,12 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 - [ ] Write a paper, and publish it at arXiv!!!
 
 ## Download
-The lmdb datasets for four settings (scene/web/document/handwriting) are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm)
+The **lmdb** datasets for four benchmark settings (scene/web/document/handwriting) are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm)
+
+The **lmdb** sub-datasets (RCTW/ReCTS/LSVT/ArT/CTW) used to construct the scene settings are available in [BaiduCloud](https://pan.baidu.com/s/1OSDNyb_6f1mJVtQad7SdhA) (psw:gkta)
+
+Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make your own dataset.
+
 
 
 

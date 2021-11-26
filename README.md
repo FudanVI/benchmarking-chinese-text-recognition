@@ -43,16 +43,42 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <th align="center">&nbsp;&nbsp;Document&nbsp;&nbsp;</th>
         <th align="center">&nbsp;Handwriting&nbsp;</th>
     </tr>
-    <tr>
-        <td align="center">CRNN [x]</td>
+    <tr bgcolor="#EEEEEE">
+        <td align="center">CRNN [13]</td>
         <td align="center">TPAMI</td>
-        <td align="center">2017</td>
+        <td align="center">2016</td>
+        <td align="center">52.8</td>
+        <td align="center">54.1</td>
+        <td align="center">93.4</td>
+        <td align="center">ing</td>
+    </tr>
+    <tr>
+        <td align="center">MORAN [14]</td>
+        <td align="center">PR</td>
+        <td align="center">2019</td>
         <td align="center">51.3</td>
         <td align="center">49.6</td>
         <td align="center">95.6</td>
         <td align="center">ing</td>
     </tr>
-
+    <tr bgcolor="#EEEEEE">
+        <td align="center">SEED [15]</td>
+        <td align="center">CVPR</td>
+        <td align="center">2020</td>
+        <td align="center">49.2</td>
+        <td align="center">46.0</td>
+        <td align="center">92.3</td>
+        <td align="center">ing</td>
+    </tr>
+    <tr>
+        <td align="center">SRN [16]</td>
+        <td align="center">CVPR</td>
+        <td align="center">2020</td>
+        <td align="center">59.2</td>
+        <td align="center">49.7</td>
+        <td align="center">96.1</td>
+        <td align="center">ing</td>
+    </tr>
 </table>
 
 - [x] CRNN(**Haiyang Yu**)
@@ -67,6 +93,8 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 
 
 ## References
+
+### Dataset
 [1] Yuan T L, Zhu Z, Xu K, et al. A large chinese text dataset in the wild. Journal of Computer Science and Technology, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90CTW%E3%80%91(JCS2019)A%20Large%20Chinese%20Text%20Dataset%20in%20the%20Wild.pdf)
 
 [2] Chng C K, Liu Y, Sun Y, et al. ICDAR2019 robust reading challenge on arbitrary-shaped text-RRC-ArT. ICDAR, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90ArT%E3%80%91(ICDAR2019)ICDAR2019%20Robust%20Reading%20Challenge%20on%20Arbitrary-Shaped%20Text%20-%20RRC-ArT.pdf)
@@ -86,6 +114,15 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 [9] Liu C L, Yin F, Wang D H, et al. CASIA online and offline Chinese handwriting databases. ICDAR, 2011. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Handwriting/%E3%80%90HWDB%E3%80%91(ICDAR2011)CASIA%20Online%20and%20Offline%20Chinese%20Handwriting%20Databases.pdf)
 
 [10] text_render: [https://github.com/Sanster/text_renderer](https://github.com/Sanster/text_renderer)
+
+### Method
+[11] Shi B, Bai X, Yao C. An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2016.
+
+[12] Luo C, Jin L, Sun Z. Moran: A multi-object rectified attention network for scene text recognition. Pattern Recognition, 2019.
+
+[13] Qiao Z, Zhou Y, Yang D, et al. Seed: Semantics enhanced encoder-decoder framework for scene text recognition. CVPR, 2020.
+
+[14] Yu D, Li X, Zhang C, et al. Towards accurate scene text recognition with semantic reasoning networks. CVPR, 2020.
 
 ## Citation
 Please cite the following paper if you are using the code/model in your research paper.

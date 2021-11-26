@@ -2,10 +2,12 @@
 This is a repository containing datasets and baselines for benchmarking Chinese text recognition. Please see the [paper]() for more details regarding the dataset divisions and experiments.
 
 ## Updates
+Nov 26, 2021: We make the datasets publicly available in Google Drive.
+
 Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to BaiduCloud.
 
 ## Todo List
-- [ ] Upload related datasets to BaiduCloud and Google Drive （**Jingye Chen**）
+- [x] Upload related datasets to BaiduCloud and Google Drive.
 - [ ] Add description for the datasets （**Jianqi Ma**）
 - [ ] Fix the experiment settings, e.g., dataset division, input size, etc. (**Jingye Chen**)
 - [ ] Complete a series of baselines (**All**)
@@ -14,9 +16,9 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 - [ ] Write a paper, and publish it at arXiv!!!
 
 ## Download
-The **lmdb** datasets for four benchmark settings (scene/web/document/handwriting) are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm)
+The **lmdb** datasets for four benchmark settings (scene/web/document/handwriting) are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm) and [GoogleDrive](https://drive.google.com/drive/folders/1J-3klWJasVJTL32FOKaFXZykKwN6Wni5?usp=sharing).
 
-The **lmdb** sub-datasets (RCTW/ReCTS/LSVT/ArT/CTW) used to construct the scene settings are available in [BaiduCloud](https://pan.baidu.com/s/1OSDNyb_6f1mJVtQad7SdhA) (psw:gkta)
+The **lmdb** sub-datasets (RCTW/ReCTS/LSVT/ArT/CTW) used to construct the scene settings are available in [BaiduCloud](https://pan.baidu.com/s/1OSDNyb_6f1mJVtQad7SdhA) (psw:gkta) and [GoogleDrive](https://drive.google.com/drive/folders/1oYZPLjTADqmrS2cqeZgURhG2KT2sCCIh?usp=sharing).
 
 Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make your own dataset.
 
@@ -93,7 +95,7 @@ Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make 
 
 ## References
 
-### Dataset
+### Datasets
 [1] Yuan T L, Zhu Z, Xu K, et al. A large chinese text dataset in the wild. Journal of Computer Science and Technology, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90CTW%E3%80%91(JCS2019)A%20Large%20Chinese%20Text%20Dataset%20in%20the%20Wild.pdf)
 
 [2] Chng C K, Liu Y, Sun Y, et al. ICDAR2019 robust reading challenge on arbitrary-shaped text-RRC-ArT. ICDAR, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90ArT%E3%80%91(ICDAR2019)ICDAR2019%20Robust%20Reading%20Challenge%20on%20Arbitrary-Shaped%20Text%20-%20RRC-ArT.pdf)
@@ -114,7 +116,7 @@ Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make 
 
 [10] text_render: [https://github.com/Sanster/text_renderer](https://github.com/Sanster/text_renderer)
 
-### Method
+### Methods
 [11] Shi B, Bai X, Yao C. An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2016.
 
 [12] Luo C, Jin L, Sun Z. Moran: A multi-object rectified attention network for scene text recognition. Pattern Recognition, 2019.

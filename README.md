@@ -30,6 +30,19 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 - [x] HWDB2.0-2.2
 
 ## Model List
+<table><tbody>
+    <tr>
+        <th rowspan="2">Method</th><th rowspan="2">Source</th><th rowspan="2">Time</th><th colspan="4">Dataset</th>
+    </tr>
+    <tr>
+        <th>Scene</th><th>Web</th><th>Document</th><th>Handwriting</th>
+    </tr>
+    <tr>
+        <td>CRNN [x]</td><td>TPAMI</td><td>2017</td><td>51.3</td><td>51.3</td><td>49.6</td><td>95.6</td><td>ing</td>
+    </tr>
+
+</table>
+
 - [x] CRNN(**Haiyang Yu**)
 - [ ] ASTER(**Mengnan Guan and Shaobo Qu**)
 - [x] MORAN(**Jingye Chen**)

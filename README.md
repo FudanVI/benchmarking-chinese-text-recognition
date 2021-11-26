@@ -46,7 +46,7 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <th align="center">&nbsp;Handwriting&nbsp;</th>
     </tr>
     <tr>
-        <td align="center">CRNN [13]</td>
+        <td align="center">CRNN [11]</td>
         <td align="center">TPAMI</td>
         <td align="center">2016</td>
         <td align="center">52.8</td>
@@ -55,16 +55,16 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <td align="center">ing</td>
     </tr>
     <tr bgcolor="#CCCCCC">
-        <td align="center">MORAN [14]</td>
+        <td align="center">MORAN [12]</td>
         <td align="center">PR</td>
         <td align="center">2019</td>
-        <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt">51.3</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt"><font color=#000000>51.3</a></td>
         <td align="center">49.6</td>
         <td align="center">95.6</td>
         <td align="center">ing</td>
     </tr>
     <tr>
-        <td align="center">SEED [15]</td>
+        <td align="center">SEED [13]</td>
         <td align="center">CVPR</td>
         <td align="center">2020</td>
         <td align="center">49.2</td>
@@ -73,7 +73,7 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <td align="center">ing</td>
     </tr>
     <tr  bgcolor="#CCCCCC">
-        <td align="center">SRN [16]</td>
+        <td align="center">SRN [14]</td>
         <td align="center">CVPR</td>
         <td align="center">2020</td>
         <td align="center">59.2</td>

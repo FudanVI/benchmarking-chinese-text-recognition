@@ -35,7 +35,7 @@ Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make 
 The above image demonstrates the four settings used in our benchmark including *Scene*, *Web*, *Document*, and *Handwriting* settings, each of which will be detailed next.
 
 ### Scene Setting
-We first collect the publicly available scene datasets including *RCTW*, *ReCTS*, *LSVT*, *ArT*, *CTW* resulting in 636,455 samples, which are randomly shuffled and then divided at a ratio of 8:1:1 to construct the training, validation, and testing datasets. Details of each scene datasets are introduced as follows:\
+We first collect the publicly available scene datasets including *RCTW*, *ReCTS*, *LSVT*, *ArT*, *CTW* resulting in 636,455 samples, which are randomly shuffled and then divided at a ratio of 8:1:1 to construct the training, validation, and testing datasets. Details of each scene datasets are introduced as follows:
 - RCTW [] : 
 - ReCTS [] :
 - LSVT [] :
@@ -43,8 +43,10 @@ We first collect the publicly available scene datasets including *RCTW*, *ReCTS*
 - CTW [] :
 
 ### Web Setting
+We collect the web text images from the [ICPR-MTWI Competition](https://tianchi.aliyun.com/competition/entrance/231684/information) held in 2018. Since the labels for the testing dataset are not available, we randomly shuffle the training cropped text images and divide it at a ratio of 8:1:1 to construct the training, validation, and testing datasets. MTWI [] is xxx ...
 
 ### Document Setting
+Since there 
 
 ### Handwriting Setting
 

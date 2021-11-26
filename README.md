@@ -35,10 +35,19 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <th rowspan="2">Method</th><th rowspan="2">Source</th><th rowspan="2">Time</th><th colspan="4">Dataset</th>
     </tr>
     <tr>
-        <th>Scene</th><th>Web</th><th>Document</th><th>Handwriting</th>
+        <td align="center" style="width:200px">Scene</td>
+        <td align="center" style="width:200px">Web</td>
+        <td align="center" style="width:200px">Document</td>
+        <td align="center" style="width:200px">Handwriting</td>
     </tr>
     <tr>
-        <td>CRNN [x]</td><td>TPAMI</td><td>2017</td><td>51.3</td><td>51.3</td><td>49.6</td><td>95.6</td><td>ing</td>
+        <td align="center">CRNN [x]</td>
+        <td align="center">TPAMI</td>
+        <td align="center">2017</td>
+        <td align="center">51.3</td>
+        <td align="center">49.6</td>
+        <td align="center">95.6</td>
+        <td align="center">ing</td>
     </tr>
 
 </table>

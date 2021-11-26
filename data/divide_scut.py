@@ -13,9 +13,21 @@ save_root = './SCUT_train' # the path for saving images, please create directory
 f = open(json_root)
 results = json.load(f)
 print('Finish loading json')
-
 f = open(os.path.join(save_root, 'gt.txt'), 'w+')
 five_keys = results['annotations'].keys()
+
+# crop images
+def image_process(img_path, tl, tr, br, bl):
+    img = cv2.imread(img_path)
+    width = min(tr[0]-tl[0], br[0]-bl[0])
+    height = min(bl[1]-tl[1], br[1]-tr[1])
+    point_0 = np.float32([tl, tr, bl, br])
+    point_i = np.float32([[0, 0], [width, 0], [0, height], [width, height]])
+    transform = cv2.getPerspectiveTransform(point_0, point_i)
+    img_i = cv2.warpPerspective(img, transform, (width, height))
+    return Image.fromarray(img_i)
+
+
 cnt = 0
 for key in five_keys:
     database = results['annotations'][key]

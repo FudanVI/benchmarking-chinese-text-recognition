@@ -38,8 +38,8 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <th colspan="4">Dataset</th>
     </tr>
     <tr>
-        <th align="center">&nbsp;&nbsp;&nbsp;&nbsp;Scene&nbsp;&nbsp;&nbsp;&nbsp;</th>
-        <th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scene&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
+        <th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
         <th align="center">&nbsp;&nbsp;Document&nbsp;&nbsp;</th>
         <th align="center">&nbsp;Handwriting&nbsp;</th>
     </tr>

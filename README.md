@@ -4,6 +4,8 @@ This is a repository containing datasets and baselines for benchmarking Chinese 
 ## Updates
 Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to BaiduCloud.
 
+## Download
+
 ## Todo List
 - [ ] Upload related datasets to BaiduCloud and Google Drive （**Jingye Chen**）
 - [ ] Add description for the datasets （**Jianqi Ma**）
@@ -43,7 +45,7 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <th align="center">&nbsp;&nbsp;Document&nbsp;&nbsp;</th>
         <th align="center">&nbsp;Handwriting&nbsp;</th>
     </tr>
-    <tr bgcolor="#EEEEEE">
+    <tr bgcolor="#CCCCCC">
         <td align="center">CRNN [13]</td>
         <td align="center">TPAMI</td>
         <td align="center">2016</td>
@@ -61,7 +63,7 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <td align="center">95.6</td>
         <td align="center">ing</td>
     </tr>
-    <tr bgcolor="#EEEEEE">
+    <tr bgcolor="#CCCCCC">
         <td align="center">SEED [15]</td>
         <td align="center">CVPR</td>
         <td align="center">2020</td>
@@ -80,17 +82,6 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <td align="center">ing</td>
     </tr>
 </table>
-
-- [x] CRNN(**Haiyang Yu**)
-- [ ] ASTER(**Mengnan Guan and Shaobo Qu**)
-- [x] MORAN(**Jingye Chen**)
-- [x] SEED(**Mengnan Guan**)
-- [x] SRN(**Xiaocong Wang**)
-- [ ] Transformer-STR(**Shaobo Qu**)
-- [ ] SAR(**Xixi Xu**)
-- [ ] DAN(**Xiaocong Wang**)
-
-
 
 ## References
 

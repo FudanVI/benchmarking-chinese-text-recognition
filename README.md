@@ -58,9 +58,9 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
         <td align="center">MORAN [12]</td>
         <td align="center">PR</td>
         <td align="center">2019</td>
-        <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt"><font color=#000000>51.3</a></td>
-        <td align="center">49.6</td>
-        <td align="center">95.6</td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt" style="color:black;">51.3</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_web.txt" style="color:black;">49.6</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_document.txt" style="color:black;">95.6</a></td>
         <td align="center">ing</td>
     </tr>
     <tr>

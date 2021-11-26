@@ -27,20 +27,7 @@ Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make 
 
 ## Datasets
 ![Alt text](./images/dataset.png)
-### Scene
-- [x] LSVT 
-- [x] RCTW
-- [x] CTW
-- [x] ArT
-- [x] ReCTS
-### Web
-- [x] MTWI
-### Document
-- [x] Synthesize500k
-### Handwritting
-- [x] ICDAR2013
-- [x] SCUT
-- [x] HWDB2.0-2.2
+
 
 ## Model List
 <table><tbody>

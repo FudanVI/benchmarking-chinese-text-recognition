@@ -54,7 +54,7 @@ We utilize the **SCUT-HCCDoc** [x] dataset for this setting. The original SCUT-H
 
 Overall, the samples size for each dataset is shown as follows:
 <table><tbody>
-    <tr bgcolor="#CCCCCC">
+    <tr>
         <th>&nbsp;&nbsp;Setting&nbsp;&nbsp;</th>
         <th>&nbsp;&nbsp;Dataset&nbsp;&nbsp;</th>
         <th>&nbsp;&nbsp;Sample Size&nbsp;&nbsp;</th>

@@ -123,9 +123,9 @@ Overall, the samples size for each dataset is shown as follows:
         <td align="center">CRNN [11]</td>
         <td align="center">TPAMI</td>
         <td align="center">2016</td>
-        <td align="center">52.8</td>
-        <td align="center">54.1</td>
-        <td align="center">93.4</td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_scene.txt" style="color:black;">52.8</a></td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_web.txt" style="color:black;">54.1</a></td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_document.txt" style="color:black;">93.4</a></td>
         <td align="center">ing</td>
     </tr>
     <tr>

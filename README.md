@@ -128,7 +128,7 @@ Overall, the samples size for each dataset is shown as follows:
         <td align="center"><a href="./predictions/CRNN/CRNN_document.txt" style="color:black;">93.4</a></td>
         <td align="center">ing</td>
     </tr>
-    <tr>
+    <tr bgcolor="#CCCCCC">
         <td align="center">ASTER [x]</td>
         <td align="center">TPAMI</td>
         <td align="center">2018</td>
@@ -137,13 +137,22 @@ Overall, the samples size for each dataset is shown as follows:
         <td align="center"><a href="./predictions/ASTER/ASTER_document.txt" style="color:black;">92.9</a></td>
         <td align="center">ing</td>
     </tr>
-    <tr bgcolor="#CCCCCC">
+    <tr>
         <td align="center">MORAN [12]</td>
         <td align="center">PR</td>
         <td align="center">2019</td>
         <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt" style="color:black;">51.3</a></td>
         <td align="center"><a href="./predictions/MORAN/MORAN_web.txt" style="color:black;">49.6</a></td>
         <td align="center"><a href="./predictions/MORAN/MORAN_document.txt" style="color:black;">95.6</a></td>
+        <td align="center">ing</td>
+    </tr>
+    <tr bgcolor="#CCCCCC">
+        <td align="center">SAR [x]</td>
+        <td align="center">AAAI</td>
+        <td align="center">2019</td>
+        <td align="center"><a href="./predictions/SAR/SAR_scene.txt" style="color:black;">61.8</a></td>
+        <td align="center"><a href="./predictions/SAR/SAR_web.txt" style="color:black;">54.0</a></td>
+        <td align="center">ing</td>
         <td align="center">ing</td>
     </tr>
     <tr>
@@ -155,7 +164,7 @@ Overall, the samples size for each dataset is shown as follows:
         <td align="center"><a href="./predictions/SEED/SEED_document.txt" style="color:black;">93.6</a></td>
         <td align="center">ing</td>
     </tr>
-    <tr  bgcolor="#CCCCCC">
+    <tr bgcolor="#CCCCCC">
         <td align="center">SRN [14]</td>
         <td align="center">CVPR</td>
         <td align="center">2020</td>

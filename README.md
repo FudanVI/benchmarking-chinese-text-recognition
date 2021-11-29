@@ -208,7 +208,7 @@ Overall, the samples size for each dataset is shown as follows:
 [14] Yu D, Li X, Zhang C, et al. Towards accurate scene text recognition with semantic reasoning networks. CVPR, 2020.
 
 ## Citation
-Please cite the following paper if you are using the code/model in your research paper.
+Please cite the following paper if you are using the code/model/settings in your research paper.
 
 ```
 to be filled

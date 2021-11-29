@@ -12,8 +12,8 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 
 ## Todo List
 - [x] Upload related datasets to BaiduCloud and Google Drive.
-- [ ] Add description for the datasets (**Jianqi Ma**)
-- [ ] Fix the experiment settings, e.g., dataset division, input size, etc. (**Jingye Chen**)
+- [x] Add description for the datasets (**Jianqi Ma**)
+- [x] Fix the experiment settings, e.g., dataset division, input size, etc. (**Jingye Chen**)
 - [ ] Complete a series of baselines (**All**)
 - [ ] Analyze the difference between Chinese texts and English texts(**Xixi Xu**)
 - [ ] Train a model to provide the baseline, and publish the code and pre-trained weight (**TBD**)

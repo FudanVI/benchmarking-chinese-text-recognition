@@ -16,8 +16,8 @@ Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to Baidu
 - [x] Fix the experiment settings, e.g., dataset division, input size, etc. (**Jingye Chen**)
 - [ ] Complete a series of baselines (**All**)
 - [ ] Analyze the difference between Chinese texts and English texts(**Xixi Xu**)
-- [ ] Train a model to provide the baseline, and publish the code and pre-trained weight (**TBD**)
-- [ ] Write a paper, and publish it at arXiv!!!
+- [ ] Train a model to provide the baseline, and publish the code and pre-trained weight (**Haiyang Yu**)
+- [ ] Write a paper, and publish it at arXiv!!! (**Jingye Chen, Jianqi Ma, XixiXu**)
 
 ## Download
 The *lmdb* datasets for three benchmark settings (scene/web/document) are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm) and [GoogleDrive](https://drive.google.com/drive/folders/1J-3klWJasVJTL32FOKaFXZykKwN6Wni5?usp=sharing).

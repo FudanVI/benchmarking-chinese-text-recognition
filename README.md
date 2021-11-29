@@ -144,7 +144,7 @@ Overall, the samples size for each dataset is shown as follows:
         <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt" style="color:black;">51.3</a></td>
         <td align="center"><a href="./predictions/MORAN/MORAN_web.txt" style="color:black;">49.6</a></td>
         <td align="center"><a href="./predictions/MORAN/MORAN_document.txt" style="color:black;">95.6</a></td>
-        <td align="center">ing</td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_handwriting.txt" style="color:black;">37.2</a></td>
     </tr>
     <tr bgcolor="#CCCCCC">
         <td align="center">SAR [x]</td>

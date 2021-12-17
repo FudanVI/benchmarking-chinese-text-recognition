@@ -4,7 +4,7 @@ import torch.optim as optim
 import datetime
 from torch.utils.tensorboard import SummaryWriter
 
-from config import config
+from args import args
 from model.TransformerSTR import Transformer
 from util import get_data_package, converter, tensor2str, \
     saver, get_alphabet
@@ -12,23 +12,23 @@ from util import get_data_package, converter, tensor2str, \
 #---------preparation-----------
 writer = SummaryWriter('runs/{}'.format(datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')))
 #save python files
-saver()
+saver(args)
 #get the alphabet
-alphabet = get_alphabet()
+alphabet = get_alphabet(args)
 
-train_loader, test_loader = get_data_package()
+train_loader, test_loader = get_data_package(args)
 
-model = Transformer().cuda()
+model = Transformer(args).cuda()
 model = nn.DataParallel(model)
 
-optimizer = optim.Adadelta(model.parameters(), lr=config['lr'], rho=0.9, weight_decay=1e-4)
+optimizer = optim.Adadelta(model.parameters(), lr=args.lr, rho=0.9, weight_decay=1e-4)
 criterion = torch.nn.CrossEntropyLoss().cuda()
 
 
 #--------load pretrain model-------
-if config['resume'].strip() != '':
+if args.resume.strip() != '':
     print('loading model..')
-    model.load_state_dict(torch.load(config['resume']))
+    model.load_state_dict(torch.load(args.resume))
 
 #---------model training-----------
 times = 0 # the currant training iteration
@@ -59,22 +59,22 @@ def test(epoch):
     global test_times
     test_times += 1
     #------save the intermediate model-------
-    torch.save(model.state_dict(), './history/{}/model.pth'.format(config['exp_name']))
+    torch.save(model.state_dict(), './history/{}/model.pth'.format(args.exp_name))
     #-------save prediction results of the currant validation
-    result_file = open('./history/{}/result_file_test_{}.txt'.format(config['exp_name'], test_times), 'w+', encoding='utf-8')
+    result_file = open('./history/{}/result_file_test_{}.txt'.format(args.exp_name, test_times), 'w+', encoding='utf-8')
 
     model.eval()
     dataloader = iter(test_loader)
     test_loader_len = len(test_loader)
     correct = 0
     total = 0
-    max_length = config['max_len']
+    max_length = args.max_len
 
     for iteration in range(test_loader_len):
         data = dataloader.next()
 
         image, label, _ = data
-        length, text_input, text_gt, string_label = converter(label)
+        length, text_input, text_gt, string_label = converter(label, args)
 
         batch = image.shape[0]
         pred = torch.zeros(batch,1).long().cuda()
@@ -125,39 +125,39 @@ def test(epoch):
     global best_acc
     if correct/total > best_acc:
         best_acc = correct / total
-        torch.save(model.state_dict(), './history/{}/best_model.pth'.format(config['exp_name']))
+        torch.save(model.state_dict(), './history/{}/best_model.pth'.format(args.exp_name))
 
     #------save the validation accuracy----
-    f = open('./history/{}/record.txt'.format(config['exp_name']),'a+',encoding='utf-8')
+    f = open('./history/{}/record.txt'.format(args.exp_name),'a+',encoding='utf-8')
     f.write("Epoch : {} | ACC : {}\n".format(epoch, correct/total))
     f.close()
 
 if __name__ == '__main__':
     #--------only test in the testing dataset-----
-    if config['test_only']:
+    if args.test_only:
         test(-1)
         exit(0)
 
-    for epoch in range(config['epoch']):
+    for epoch in range(args.epoch):
         #-----save the model parameters of each epoch----
-        torch.save(model.state_dict(), './history/{}/model.pth'.format(config['exp_name']))
+        torch.save(model.state_dict(), './history/{}/model.pth'.format(args.exp_name))
 
         dataloader = iter(train_loader)
         train_loader_len = len(train_loader)
         for iteration in range(train_loader_len):
             data = dataloader.next()
             image, label, _ = data
-            length, text_input, text_gt, string_label = converter(label)
+            length, text_input, text_gt, string_label = converter(label, args)
 
             train(epoch, iteration, image, length, text_input, text_gt)
 
         #---------validation--------
-        if (epoch+1) % config['val_frequency'] == 0:
+        if (epoch+1) % args.val_frequency == 0:
             torch.cuda.empty_cache()
             test(epoch+1)
 
         #---------lr schedule--------
-        if (epoch+1) % config['schedule_frequency'] == 0:
+        if (epoch+1) % args.schedule_frequency == 0:
             for p in optimizer.param_groups:
                 p['lr'] *= 0.8
 

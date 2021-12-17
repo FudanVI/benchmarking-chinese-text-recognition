@@ -5,13 +5,14 @@ from model.ResNet import ResNet, BasicBlock
 from util import get_alphabet
 from model.TransformerUtil import Decoder, PositionalEncoding, Embeddings, Generator
 
-alphabet = get_alphabet()
+
 
 class Transformer(nn.Module):
 
-    def __init__(self):
+    def __init__(self, args):
         super(Transformer, self).__init__()
 
+        alphabet = get_alphabet(args)
         self.word_n_class = len(alphabet)
         self.pe = PositionalEncoding(d_model=512, dropout=0.1, max_len=7000)
         self.encoder = ResNet(num_in=3, block=BasicBlock, layers=[3,4,6,3]).cuda()

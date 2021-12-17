@@ -7,57 +7,59 @@ from shutil import copyfile
 from torch.utils.data import Dataset
 
 #----------alphabet----------
-alphabet_character_file = open(config['alpha_path'])
-alphabet_character = list(alphabet_character_file.read().strip())
-alphabet_character_raw = ['START']
-for item in alphabet_character:
-    alphabet_character_raw.append(item)
-alphabet_character_raw.append('END')
-alphabet_character = alphabet_character_raw
+def get_alp2num(args):
+    alphabet_character_file = open(args.alpha_path)
+    alphabet_character = list(alphabet_character_file.read().strip())
+    alphabet_character_raw = ['START']
+    for item in alphabet_character:
+        alphabet_character_raw.append(item)
+    alphabet_character_raw.append('END')
+    alphabet_character = alphabet_character_raw
 
-alp2num_character = {}
-for index, char in enumerate(alphabet_character):
-    alp2num_character[char] = index
+    alp2num_character = {}
+    for index, char in enumerate(alphabet_character):
+        alp2num_character[char] = index
+    return alp2num_character
 
 
-def get_dataloader(root,shuffle=False):
-    dataset = lmdbDataset(root, resizeNormalize((config['imageW'], config['imageH'])))
+def get_dataloader(root, args, shuffle=False):
+    dataset = lmdbDataset(root, resizeNormalize((args.imageW, args.imageH)))
     dataloader = torch.utils.data.DataLoader(
-        dataset, batch_size=config['batch'], shuffle=shuffle, num_workers=8,
+        dataset, batch_size=args.batch, shuffle=shuffle, num_workers=8,
     )
     return dataloader, dataset
 
-def get_data_package():
+def get_data_package(args):
     train_dataset = []
-    for dataset_root in config['train_dataset'].split(','):
-        _ , dataset = get_dataloader(dataset_root,shuffle=True)
+    for dataset_root in args.train_dataset.split(','):
+        _ , dataset = get_dataloader(dataset_root, args, shuffle=True)
         train_dataset.append(dataset)
     train_dataset_total = torch.utils.data.ConcatDataset(train_dataset)
 
     train_dataloader = torch.utils.data.DataLoader(
-        train_dataset_total, batch_size=config['batch'], shuffle=True, num_workers=8,
+        train_dataset_total, batch_size=args.batch, shuffle=True, num_workers=8,
     )
 
     test_dataset = []
-    for dataset_root in config['test_dataset'].split(','):
-        _ , dataset = get_dataloader(dataset_root,shuffle=True)
+    for dataset_root in args.test_dataset.split(','):
+        _ , dataset = get_dataloader(dataset_root, args, shuffle=True)
         test_dataset.append(dataset)
     test_dataset_total = torch.utils.data.ConcatDataset(test_dataset)
 
     test_dataloader = torch.utils.data.DataLoader(
-        test_dataset_total, batch_size=config['batch'], shuffle=False, num_workers=8,
+        test_dataset_total, batch_size=args.batch, shuffle=False, num_workers=8,
     )
 
 
     return train_dataloader, test_dataloader
 
 
-def converter(label):
+def converter(label, args):
     "Convert string label to tensor"
 
     string_label = label
     label = [i for i in label]
-    alp2num = alp2num_character
+    alp2num = get_alp2num(args)
 
     batch = len(label)
     length = torch.Tensor([len(i) for i in label]).long().cuda()
@@ -81,7 +83,14 @@ def converter(label):
 
     return length, text_input, text_all, string_label
 
-def get_alphabet():
+def get_alphabet(args):
+    alphabet_character_file = open(args.alpha_path)
+    alphabet_character = list(alphabet_character_file.read().strip())
+    alphabet_character_raw = ['START']
+    for item in alphabet_character:
+        alphabet_character_raw.append(item)
+    alphabet_character_raw.append('END')
+    alphabet_character = alphabet_character_raw
     return alphabet_character
 
 def tensor2str(tensor):
@@ -93,33 +102,33 @@ def tensor2str(tensor):
         string += alphabet[i]
     return string
 
-def saver():
+def saver(args):
     try:
-        shutil.rmtree('./history/{}'.format(config['exp_name']))
+        shutil.rmtree('./history/{}'.format(args.exp_name))
     except:
         pass
-    os.mkdir('./history/{}'.format(config['exp_name']))
+    os.mkdir('./history/{}'.format(args.exp_name))
 
     src = './train.py'
-    dst = os.path.join('./history', config['exp_name'], 'train.py')
+    dst = os.path.join('./history', args.exp_name, 'train.py')
     copyfile(src, dst)
 
     src = './util.py'
-    dst = os.path.join('./history', config['exp_name'], 'util.py')
+    dst = os.path.join('./history', args.exp_name, 'util.py')
     copyfile(src, dst)
 
     src = './config.py'
-    dst = os.path.join('./history', config['exp_name'], 'config.py')
+    dst = os.path.join('./history', args.exp_name, 'config.py')
     copyfile(src, dst)
 
     src = './model/TransformerSTR.py'
-    dst = os.path.join('./history', config['exp_name'], 'TransformerSTR.py')
+    dst = os.path.join('./history', args.exp_name, 'TransformerSTR.py')
     copyfile(src, dst)
 
     src = './model/TransformerUtil.py'
-    dst = os.path.join('./history', config['exp_name'], 'TransformerUtil.py')
+    dst = os.path.join('./history', args.exp_name, 'TransformerUtil.py')
     copyfile(src, dst)
 
     src = './model/ResNet.py'
-    dst = os.path.join('./history', config['exp_name'], 'ResNet.py')
+    dst = os.path.join('./history', args.exp_name, 'ResNet.py')
     copyfile(src, dst)

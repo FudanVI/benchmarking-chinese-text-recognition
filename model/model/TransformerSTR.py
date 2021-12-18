@@ -5,8 +5,6 @@ from model.ResNet import ResNet, BasicBlock
 from util import get_alphabet
 from model.TransformerUtil import Decoder, PositionalEncoding, Embeddings, Generator
 
-
-
 class Transformer(nn.Module):
 
     def __init__(self, args):
@@ -18,9 +16,6 @@ class Transformer(nn.Module):
         self.encoder = ResNet(num_in=3, block=BasicBlock, layers=[3,4,6,3]).cuda()
 
         self.decoder = Decoder()
-
-        for p in self.parameters():
-            p.requires_grad = False
 
         self.embedding_word = Embeddings(512, self.word_n_class)
         self.generator_word = Generator(1024, self.word_n_class)

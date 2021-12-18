@@ -30,16 +30,16 @@ def get_dataloader(root, args, shuffle=False):
     return dataloader, dataset
 
 def get_data_package(args):
-    train_dataset = []
-    for dataset_root in args.train_dataset.split(','):
-        _ , dataset = get_dataloader(dataset_root, args, shuffle=True)
-        train_dataset.append(dataset)
-    train_dataset_total = torch.utils.data.ConcatDataset(train_dataset)
+    if not args.test_only:
+        train_dataset = []
+        for dataset_root in args.train_dataset.split(','):
+            _, dataset = get_dataloader(dataset_root, args, shuffle=True)
+            train_dataset.append(dataset)
+        train_dataset_total = torch.utils.data.ConcatDataset(train_dataset)
 
-    train_dataloader = torch.utils.data.DataLoader(
-        train_dataset_total, batch_size=args.batch, shuffle=True, num_workers=8,
-    )
-
+        train_dataloader = torch.utils.data.DataLoader(
+            train_dataset_total, batch_size=args.batch, shuffle=True, num_workers=8,
+        )
     test_dataset = []
     for dataset_root in args.test_dataset.split(','):
         _ , dataset = get_dataloader(dataset_root, args, shuffle=True)
@@ -50,8 +50,10 @@ def get_data_package(args):
         test_dataset_total, batch_size=args.batch, shuffle=False, num_workers=8,
     )
 
-
-    return train_dataloader, test_dataloader
+    if not args.test_only:
+        return train_dataloader, test_dataloader
+    else:
+        return None, test_dataloader
 
 
 def converter(label, args):
@@ -93,8 +95,8 @@ def get_alphabet(args):
     alphabet_character = alphabet_character_raw
     return alphabet_character
 
-def tensor2str(tensor):
-    alphabet = get_alphabet()
+def tensor2str(tensor, args):
+    alphabet = get_alphabet(args)
     string = ""
     for i in tensor:
         if i == (len(alphabet)-1):

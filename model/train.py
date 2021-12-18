@@ -2,12 +2,17 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 import datetime
+import warnings
+from tqdm import trange
 from torch.utils.tensorboard import SummaryWriter
 
 from args import args
 from model.TransformerSTR import Transformer
 from util import get_data_package, converter, tensor2str, \
     saver, get_alphabet
+
+#-------ignore the warning information-------
+warnings.filterwarnings("ignore")
 
 #---------preparation-----------
 writer = SummaryWriter('runs/{}'.format(datetime.datetime.now().strftime('%Y-%m-%d-%H-%M-%S')))
@@ -44,16 +49,19 @@ def train(epoch, iteration, image, length, text_input, text_gt):
     loss.backward()
     optimizer.step()
 
-    print('epoch : {} | iter : {}/{} | loss : {}'.format(epoch, iteration, len(train_loader), loss))
+    # print('epoch : {} | iter : {}/{} | loss : {}'.format(epoch, iteration, len(train_loader), loss))
     writer.add_scalar('loss', loss, times)
     times += 1
 
+    return loss.item()
 
-#---------model testing----------
+
+# #---------model testing----------
 test_times = 0
 best_acc = -1
 @torch.no_grad()
 def test(epoch):
+    print('start validation!')
     torch.cuda.empty_cache()
 
     global test_times
@@ -70,54 +78,57 @@ def test(epoch):
     total = 0
     max_length = args.max_len
 
-    for iteration in range(test_loader_len):
-        data = dataloader.next()
+    with trange(test_loader_len) as t:
+        for iteration in t:
+            data = dataloader.next()
+            image, label, _ = data
+            length, text_input, text_gt, string_label = converter(label, args)
 
-        image, label, _ = data
-        length, text_input, text_gt, string_label = converter(label, args)
+            batch = image.shape[0]
+            pred = torch.zeros(batch,1).long().cuda()
+            image_features = None
 
-        batch = image.shape[0]
-        pred = torch.zeros(batch,1).long().cuda()
-        image_features = None
+            prob = torch.zeros(batch, max_length).float()
+            for i in range(max_length):
+                length_tmp = torch.zeros(batch).long().cuda() + i + 1
+                result = model(image, length_tmp, pred, conv_feature=image_features, test=True)
+                prediction = result['pred']
+                now_pred = torch.max(torch.softmax(prediction,2), 2)[1]
+                prob[:,i] = torch.max(torch.softmax(prediction,2), 2)[0][:,-1]
+                pred = torch.cat((pred, now_pred[:,-1].view(-1,1)), 1)
+                image_features = result['conv']
 
-        prob = torch.zeros(batch, max_length).float()
-        for i in range(max_length):
-            length_tmp = torch.zeros(batch).long().cuda() + i + 1
-            result = model(image, length_tmp, pred, conv_feature=image_features, test=True)
-            prediction = result['pred']
-            now_pred = torch.max(torch.softmax(prediction,2), 2)[1]
-            prob[:,i] = torch.max(torch.softmax(prediction,2), 2)[0][:,-1]
-            pred = torch.cat((pred, now_pred[:,-1].view(-1,1)), 1)
-            image_features = result['conv']
+            text_gt_list = []
+            start = 0
+            for i in length:
+                text_gt_list.append(text_gt[start: start + i])
+                start += i
 
-        text_gt_list = []
-        start = 0
-        for i in length:
-            text_gt_list.append(text_gt[start: start + i])
-            start += i
+            text_pred_list = []
+            for i in range(batch):
+                now_pred = []
+                for j in range(max_length):
+                    if pred[i][j] != len(alphabet) - 1:
+                        now_pred.append(pred[i][j])
+                    else:
+                        break
+                text_pred_list.append(torch.Tensor(now_pred)[1:].long().cuda())
 
-        text_pred_list = []
-        for i in range(batch):
-            now_pred = []
-            for j in range(max_length):
-                if pred[i][j] != len(alphabet) - 1:
-                    now_pred.append(pred[i][j])
-                else:
-                    break
-            text_pred_list.append(torch.Tensor(now_pred)[1:].long().cuda())
+            #---------save predictions----------
+            for i in range(batch):
+                state = False
+                pred = tensor2str(text_pred_list[i], args)
+                gt = tensor2str(text_gt_list[i], args)
 
-        #---------save predictions----------
-        for i in range(batch):
-            state = False
-            pred = tensor2str(text_pred_list[i])
-            gt = tensor2str(text_gt_list[i])
+                if pred == gt:
+                    correct += 1
+                    state = True
+                total += 1
+                print('{} | {} | {} | {}'.format(total, pred, gt, state))
+                result_file.write('{} | {} | {} | {}\n'.format(total, pred, gt, state))
 
-            if pred == gt:
-                correct += 1
-                state = True
-            total += 1
-            print('{} | {} | {} | {} | {}'.format(total, pred, gt, state, correct / total))
-            result_file.write('{} | {} | {} | {}\n'.format(total, pred, gt, state))
+            t.set_postfix(accuracy=(correct/total))
+
     result_file.close()
     print("ACC : {}".format(correct/total))
 
@@ -132,6 +143,7 @@ def test(epoch):
     f.write("Epoch : {} | ACC : {}\n".format(epoch, correct/total))
     f.close()
 
+
 if __name__ == '__main__':
     #--------only test in the testing dataset-----
     if args.test_only:
@@ -144,12 +156,17 @@ if __name__ == '__main__':
 
         dataloader = iter(train_loader)
         train_loader_len = len(train_loader)
-        for iteration in range(train_loader_len):
-            data = dataloader.next()
-            image, label, _ = data
-            length, text_input, text_gt, string_label = converter(label, args)
 
-            train(epoch, iteration, image, length, text_input, text_gt)
+        with trange(train_loader_len) as t:
+            t.set_description("epoch:{}/{}".format(epoch, args.epoch))
+            for iteration in t:
+                data = dataloader.next()
+                image, label, _ = data
+                length, text_input, text_gt, string_label = converter(label, args)
+
+                loss_item = train(epoch, iteration, image, length, text_input, text_gt)
+                if iteration % 50 == 0:
+                    t.set_postfix(loss=loss_item)
 
         #---------validation--------
         if (epoch+1) % args.val_frequency == 0:

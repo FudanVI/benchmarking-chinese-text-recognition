@@ -123,7 +123,6 @@ def test(epoch):
                     correct += 1
                     state = True
                 total += 1
-                print('{} | {} | {} | {}'.format(total, pred, gt, state))
                 result_file.write('{} | {} | {} | {}\n'.format(total, pred, gt, state))
 
             t.set_postfix(accuracy=(correct/total))

@@ -1,6 +1,5 @@
 import torch
 from data.lmdbReader import lmdbDataset, resizeNormalize
-from config import config
 import os
 import shutil
 from shutil import copyfile
@@ -119,8 +118,8 @@ def saver(args):
     dst = os.path.join('./history', args.exp_name, 'util.py')
     copyfile(src, dst)
 
-    src = './config.py'
-    dst = os.path.join('./history', args.exp_name, 'config.py')
+    src = './args.py'
+    dst = os.path.join('./history', args.exp_name, 'args.py')
     copyfile(src, dst)
 
     src = './model/TransformerSTR.py'

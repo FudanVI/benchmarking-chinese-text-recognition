@@ -29,7 +29,6 @@ model = nn.DataParallel(model)
 optimizer = optim.Adadelta(model.parameters(), lr=args.lr, rho=0.9, weight_decay=1e-4)
 criterion = torch.nn.CrossEntropyLoss().cuda()
 
-
 #--------load pretrain model-------
 if args.resume.strip() != '':
     print('loading model..')
@@ -165,8 +164,7 @@ if __name__ == '__main__':
                 length, text_input, text_gt, string_label = converter(label, args)
 
                 loss_item = train(epoch, iteration, image, length, text_input, text_gt)
-                if iteration % 50 == 0:
-                    t.set_postfix(loss=loss_item)
+                t.set_postfix(loss=loss_item)
 
         #---------validation--------
         if (epoch+1) % args.val_frequency == 0:

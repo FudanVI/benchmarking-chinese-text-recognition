@@ -1,1 +1,1 @@
-CUDA_VISIBLE_DEVICES=0 python train.py --train_dataset path_to_train_dataset --test_dataset path_to_test_dataset --alpha_path path_to_alphabet_file --resume path_to_pretrained_model --exp_name test
+CUDA_VISIBLE_DEVICES=0 python train.py --train_dataset path_to_train_dataset --test_dataset path_to_test_dataset --alpha_path path_to_alphabet_file  --exp_name test

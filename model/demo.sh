@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=0 python demo.py --image_path path_to_test_image --alpha_path path_to_alphabet_file --resume path_to_pretrain_model

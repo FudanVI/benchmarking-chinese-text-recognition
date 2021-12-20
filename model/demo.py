@@ -23,7 +23,11 @@ alphabet = get_alphabet(args)
 # build the model
 model = Transformer(args).cuda()
 model = nn.DataParallel(model)
-model.load_state_dict(torch.load(args.resume))
+#--------load pretrain model-------
+if args.resume.strip() != '':
+    print('loading model..')
+    model.load_state_dict(torch.load(args.resume))
+
 model.eval()
 
 # load the image

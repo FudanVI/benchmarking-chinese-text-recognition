@@ -6,18 +6,11 @@ This repository contains datasets and baselines for benchmarking Chinese text re
 
 
 ## Updates
+Nov 31, 2021: The paper is uploaded to arXiv. 
+
 Nov 26, 2021: We make the datasets publicly available in Google Drive.
 
 Nov 25, 2021: We upload the Chinese text datasets used in our benchmark to BaiduCloud.
-
-## Todo List
-- [x] Upload related datasets to BaiduCloud and Google Drive. (**Jingye Chen**)
-- [x] Add description for the datasets (**Jianqi Ma**)
-- [x] Fix the experiment settings, e.g., dataset division, input size, etc. (**Jingye Chen**)
-- [ ] Complete a series of baselines (**All**)
-- [ ] Analyze the difference between Chinese texts and English texts(**Xixi Xu**)
-- [ ] Train a model to provide the baseline, and publish the code and pre-trained weight (**Haiyang Yu**)
-- [ ] Write a paper, and publish it at arXiv!!! (**Jingye Chen, Jianqi Ma, Xixi Xu**)
 
 ## Download
 The *lmdb* datasets for three benchmark settings (scene/web/document) are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm) and [GoogleDrive](https://drive.google.com/drive/folders/1J-3klWJasVJTL32FOKaFXZykKwN6Wni5?usp=sharing).
@@ -213,6 +206,8 @@ Please cite the following paper if you are using the code/model/settings in your
 ```
 to be filled
 ```
+
+## Acknowledgements
 
 
 ## Copyright

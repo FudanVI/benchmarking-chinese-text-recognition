@@ -40,13 +40,13 @@ We first collect the publicly available scene datasets including **RCTW**, **ReC
 We combine all the subdatasets, resulting in 636,455 text samples. We randomly shuffle these samples and split them at a ratio of 8:1:1, leading to 509,164 samples for training, 63,645 samples for validation, and 63,646 samples for testing. 
 
 ### Web Setting
-To collect the web dataset, we utilize MTWI [6] that contains 20,000 Chinese and English web text images from 17 different categories on the Taobao website. The text samples are appeared in various scenes, typography and designs. We derive 140,589 text images from the training set, and manually divide them at a ratio of 8:1:1, resulting in 112,471 samples for training, 14,059 samples for validation, and 14,059 samples for testing.
+To collect the web dataset, we utilize **MTWI [6]** that contains 20,000 Chinese and English web text images from 17 different categories on the Taobao website. The text samples are appeared in various scenes, typography and designs. We derive 140,589 text images from the training set, and manually divide them at a ratio of 8:1:1, resulting in 112,471 samples for training, 14,059 samples for validation, and 14,059 samples for testing.
 
 ### Document Setting
-We use the public repository Text Render [7] to generate some document-style synthetic text images. More specifically, we uniformly sample the length of text varying from 1 to 15. The corpus comes from wiki, films, amazon, and baike. The dataset contains 500,000 in total and is randomly divided into training, validation, and testing sets with a proportion of 8:1:1 (400,000 v.s. 50,000 v.s. 50,000).
+We use the public repository **Text Render [7]** to generate some document-style synthetic text images. More specifically, we uniformly sample the length of text varying from 1 to 15. The corpus comes from wiki, films, amazon, and baike. The dataset contains 500,000 in total and is randomly divided into training, validation, and testing sets with a proportion of 8:1:1 (400,000 v.s. 50,000 v.s. 50,000).
 
 ### Handwriting Setting
-We collect the handwriting dataset based on SCUT-HCCDoc [8], which captures the Chinese handwritten image with cameras in unconstrained environments. Following the official settings, we derive 93,254 text lines for training and 23,389 for testing, respectively. To pursue more rigorous research, we manually split the original training set into two sets at a ratio of 4:1, resulting in 74,603 samples for training and 18,651 samples for validation. For convenience, we continue to use the original 23,389 samples for testing.
+We collect the handwriting dataset based on **SCUT-HCCDoc [8]**, which captures the Chinese handwritten image with cameras in unconstrained environments. Following the official settings, we derive 93,254 text lines for training and 23,389 for testing, respectively. To pursue more rigorous research, we manually split the original training set into two sets at a ratio of 4:1, resulting in 74,603 samples for training and 18,651 samples for validation. For convenience, we continue to use the original 23,389 samples for testing.
 
 Overall, the amount of text samples for each dataset is shown as follows:
 <table><tbody>
@@ -103,13 +103,13 @@ Overall, the amount of text samples for each dataset is shown as follows:
 
 ## Baselines
 <table><tbody>
-    <tr bgcolor="#CCCCCC">
+    <tr>
         <th rowspan="2">&nbsp;&nbsp;Method&nbsp;&nbsp;</th>
         <th rowspan="2">&nbsp;&nbsp;Source&nbsp;&nbsp;</th>
         <th rowspan="2">&nbsp;&nbsp;Time&nbsp;&nbsp;</th>
         <th colspan="4">Dataset</th>
     </tr>
-    <tr bgcolor="#CCCCCC">
+    <tr>
         <th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Scene&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
         <th align="center">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Web&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th>
         <th align="center">&nbsp;&nbsp;Document&nbsp;&nbsp;</th>
@@ -124,7 +124,7 @@ Overall, the amount of text samples for each dataset is shown as follows:
         <td align="center"><a href="./predictions/CRNN/CRNN_document.txt" style="color:black;">93.4</a></td>
         <td align="center">ing</td>
     </tr>
-    <tr bgcolor="#CCCCCC">
+    <tr>
         <td align="center">ASTER [x]</td>
         <td align="center">TPAMI</td>
         <td align="center">2018</td>
@@ -142,7 +142,7 @@ Overall, the amount of text samples for each dataset is shown as follows:
         <td align="center"><a href="./predictions/MORAN/MORAN_document.txt" style="color:black;">95.6</a></td>
         <td align="center"><a href="./predictions/MORAN/MORAN_handwriting.txt" style="color:black;">37.2</a></td>
     </tr>
-    <tr bgcolor="#CCCCCC">
+    <tr>
         <td align="center">SAR [x]</td>
         <td align="center">AAAI</td>
         <td align="center">2019</td>
@@ -160,7 +160,7 @@ Overall, the amount of text samples for each dataset is shown as follows:
         <td align="center"><a href="./predictions/SEED/SEED_document.txt" style="color:black;">93.6</a></td>
         <td align="center">ing</td>
     </tr>
-    <tr bgcolor="#CCCCCC">
+    <tr>
         <td align="center">SRN [14]</td>
         <td align="center">CVPR</td>
         <td align="center">2020</td>

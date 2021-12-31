@@ -104,9 +104,8 @@ Overall, the amount of text samples for each dataset is shown as follows:
 ## Baselines
 <table><tbody>
     <tr>
-        <th rowspan="2">&nbsp;&nbsp;Method&nbsp;&nbsp;</th>
-        <th rowspan="2">&nbsp;&nbsp;Source&nbsp;&nbsp;</th>
-        <th rowspan="2">&nbsp;&nbsp;Time&nbsp;&nbsp;</th>
+        <th rowspan="2">&nbsp;&nbsp;Baseline&nbsp;&nbsp;</th>
+        <th rowspan="2">&nbsp;&nbsp;Year&nbsp;&nbsp;</th>
         <th colspan="4">Dataset</th>
     </tr>
     <tr>
@@ -117,7 +116,6 @@ Overall, the amount of text samples for each dataset is shown as follows:
     </tr>
     <tr>
         <td align="center">CRNN [9]</td>
-        <td align="center">TPAMI</td>
         <td align="center">2016</td>
         <td align="center"><a href="./predictions/CRNN/CRNN_scene.txt" style="color:black;">52.8</a></td>
         <td align="center"><a href="./predictions/CRNN/CRNN_web.txt" style="color:black;">54.1</a></td>
@@ -126,7 +124,6 @@ Overall, the amount of text samples for each dataset is shown as follows:
     </tr>
     <tr>
         <td align="center">ASTER [10]</td>
-        <td align="center">TPAMI</td>
         <td align="center">2018</td>
         <td align="center"><a href="./predictions/ASTER/ASTER_scene.txt" style="color:black;">54.1</a></td>
         <td align="center"><a href="./predictions/ASTER/ASTER_web.txt" style="color:black;">52.0</a></td>
@@ -135,7 +132,6 @@ Overall, the amount of text samples for each dataset is shown as follows:
     </tr>
     <tr>
         <td align="center">MORAN [11]</td>
-        <td align="center">PR</td>
         <td align="center">2019</td>
         <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt" style="color:black;">51.3</a></td>
         <td align="center"><a href="./predictions/MORAN/MORAN_web.txt" style="color:black;">49.6</a></td>
@@ -144,7 +140,6 @@ Overall, the amount of text samples for each dataset is shown as follows:
     </tr>
     <tr>
         <td align="center">SAR [12]</td>
-        <td align="center">AAAI</td>
         <td align="center">2019</td>
         <td align="center"><a href="./predictions/SAR/SAR_scene.txt" style="color:black;">61.8</a></td>
         <td align="center"><a href="./predictions/SAR/SAR_web.txt" style="color:black;">54.0</a></td>
@@ -153,7 +148,6 @@ Overall, the amount of text samples for each dataset is shown as follows:
     </tr>
     <tr>
         <td align="center">SEED [13]</td>
-        <td align="center">CVPR</td>
         <td align="center">2020</td>
         <td align="center"><a href="./predictions/SEED/SEED_scene.txt" style="color:black;">49.2</a></td>
         <td align="center"><a href="./predictions/SEED/SEED_web.txt" style="color:black;">46.0</a></td>
@@ -162,7 +156,6 @@ Overall, the amount of text samples for each dataset is shown as follows:
     </tr>
     <tr>
         <td align="center">SRN [14]</td>
-        <td align="center">CVPR</td>
         <td align="center">2020</td>
         <td align="center"><a href="./predictions/SRN/SRN_scene.txt" style="color:black;">59.2</a></td>
         <td align="center"><a href="./predictions/SRN/SRN_web.txt" style="color:black;">49.7</a></td>
@@ -171,7 +164,6 @@ Overall, the amount of text samples for each dataset is shown as follows:
     </tr>
     <tr>
         <td align="center">TransOCR [15]</td>
-        <td align="center">CVPR</td>
         <td align="center">2021</td>
         <td align="center"><a href="./predictions/SRN/SRN_scene.txt" style="color:black;">59.2</a></td>
         <td align="center"><a href="./predictions/SRN/SRN_web.txt" style="color:black;">49.7</a></td>
@@ -183,33 +175,40 @@ Overall, the amount of text samples for each dataset is shown as follows:
 ## References
 
 ### Datasets
-[1] Yuan T L, Zhu Z, Xu K, et al. A large chinese text dataset in the wild. Journal of Computer Science and Technology, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90CTW%E3%80%91(JCS2019)A%20Large%20Chinese%20Text%20Dataset%20in%20the%20Wild.pdf)
+[1] Shi B, Yao C, Liao M, et al. ICDAR2017 competition on reading chinese text in the wild (RCTW-17). ICDAR, 2017. 
 
-[2] Chng C K, Liu Y, Sun Y, et al. ICDAR2019 robust reading challenge on arbitrary-shaped text-RRC-ArT. ICDAR, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90ArT%E3%80%91(ICDAR2019)ICDAR2019%20Robust%20Reading%20Challenge%20on%20Arbitrary-Shaped%20Text%20-%20RRC-ArT.pdf)
+[2] Zhang R, Zhou Y, Jiang Q, et al. Icdar 2019 robust reading challenge on reading chinese text on signboard. ICDAR, 2019. 
 
-[3] Sun Y, Ni Z, Chng C K, et al. ICDAR 2019 competition on large-scale street view text with partial labeling-RRC-LSVT. ICDAR, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90LSVT%E3%80%91(ICDAR2019)ICDAR%202019%20Competition%20on%20Large-scale%20Street%20View%20Text%20with%20Partial%20Labeling%20-%20RRC-LSVT.pdf)
+[3] Sun Y, Ni Z, Chng C K, et al. ICDAR 2019 competition on large-scale street view text with partial labeling-RRC-LSVT. ICDAR, 2019. 
 
-[4] Shi B, Yao C, Liao M, et al. ICDAR2017 competition on reading chinese text in the wild (RCTW-17). ICDAR, 2017. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90RCTW%E3%80%91(ICDAR2017)ICDAR2017%20Competition%20on%20Reading%20Chinese%20Text%20in%20the%20Wild%20(RCTW-17).pdf)
+[4] Chng C K, Liu Y, Sun Y, et al. ICDAR2019 robust reading challenge on arbitrary-shaped text-RRC-ArT. ICDAR, 2019. 
 
-[5] Zhang R, Zhou Y, Jiang Q, et al. Icdar 2019 robust reading challenge on reading chinese text on signboard. ICDAR, 2019. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Scene/%E3%80%90ReCTS%E3%80%91(ICDAR2019)ICDAR%202019%20Robust%20Reading%20Challenge%20on%20Reading%20Chinese%20Text%20on%20Signboard.pdf)
+[5] Yuan T L, Zhu Z, Xu K, et al. A large chinese text dataset in the wild. Journal of Computer Science and Technology, 2019.
 
-[6] He M, Liu Y, Yang Z, et al. ICPR2018 contest on robust reading for multi-type web images. ICPR, 2018. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Web/%E3%80%90MTWI%E3%80%91(ICPR2018)ICPR2018%20Contest%20on%20Robust%20Reading%20for%20Multi-Type%20Web%20Images.pdf)
+[6] He M, Liu Y, Yang Z, et al. ICPR2018 contest on robust reading for multi-type web images. ICPR, 2018. 
 
-[7] Zhang H, Liang L, Jin L. SCUT-HCCDoc: A new benchmark dataset of handwritten Chinese text in unconstrained camera-captured documents. Pattern Recognition, 2020. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Handwriting/%E3%80%90SCUT%E3%80%91(PR2020)SCUT-HCCDoc-%20A%20new%20benchmark%20dataset%20of%20handwritten%20Chinese%20text%20in%20unconstrained%20camera-captured%20documents.pdf)
+[7] text_render: [https://github.com/Sanster/text_renderer](https://github.com/Sanster/text_renderer)
 
-[10] text_render: [https://github.com/Sanster/text_renderer](https://github.com/Sanster/text_renderer)
+[8] Zhang H, Liang L, Jin L. SCUT-HCCDoc: A new benchmark dataset of handwritten Chinese text in unconstrained camera-captured documents. Pattern Recognition, 2020. 
+
 
 ### Methods
-[11] Shi B, Bai X, Yao C. An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition. IEEE Transactions on Pattern Analysis and Machine Intelligence, 2016.
+[9] Shi B, Bai X, Yao C. An end-to-end trainable neural network for image-based sequence recognition and its application to scene text recognition. TPAMI, 2016.
 
-[12] Luo C, Jin L, Sun Z. Moran: A multi-object rectified attention network for scene text recognition. Pattern Recognition, 2019.
+[10] Shi B, Yang M, Wang X, et al. Aster: An attentional scene text recognizer with flexible rectification. TPAMI, 2018.
+
+[11] Luo C, Jin L, Sun Z. Moran: A multi-object rectified attention network for scene text recognition. PR, 2019.
+
+[12] Li H, Wang P, Shen C, et al. Show, attend and read: A simple and strong baseline for irregular text recognition. AAAI, 2019.
 
 [13] Qiao Z, Zhou Y, Yang D, et al. Seed: Semantics enhanced encoder-decoder framework for scene text recognition. CVPR, 2020.
 
 [14] Yu D, Li X, Zhang C, et al. Towards accurate scene text recognition with semantic reasoning networks. CVPR, 2020.
 
+[15] Chen J, Li B, Xue X. Scene Text Telescope: Text-Focused Scene Image Super-Resolution. CVPR, 2021.
+
 ## Citation
-Please cite the following paper if you are using the code/model/settings in your research paper.
+Please consider cite this paper if you find it useful in your research.
 
 ```
 to be filled

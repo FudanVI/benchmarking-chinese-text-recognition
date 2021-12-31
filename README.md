@@ -2,8 +2,10 @@
 ![](https://img.shields.io/badge/Team-FudanVI-red) ![](https://img.shields.io/badge/Maintained-Yes-green) ![](https://img.shields.io/badge/License-MIT-blue)
 
 
-This repository contains datasets and baselines for benchmarking Chinese text recognition. Please see the corresponding [paper]() for more details regarding the dataset divisions, experiments, etc.
+This repository contains datasets and baselines for benchmarking Chinese text recognition. Please see the corresponding [paper]() for more details regarding the datasets, baselines, the empirical study, etc.
 
+## Highlights
+:star2: test
 
 ## Updates
 Nov 31, 2021: The paper is uploaded to arXiv. 

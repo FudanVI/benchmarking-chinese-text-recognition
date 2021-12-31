@@ -29,7 +29,7 @@ Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make 
 ![Alt text](./images/dataset.png)
 The image demonstrates the four datasets used in our benchmark including *Scene*, *Web*, *Document*, and *Handwriting* datasets, each of which is introduced next.
 
-### Scene Setting
+### Scene Dataset
 We first collect the publicly available scene datasets including **RCTW**, **ReCTS**, **LSVT**, **ArT**, **CTW** resulting in 636,455 samples, which are randomly shuffled and then divided at a ratio of 8:1:1 to construct the training, validation, and testing datasets. Details of each scene datasets are introduced as follows:
 - **RCTW** [1] provides 12,263 annotated Chinese text images from natural scenes. We derive 44,420 text lines from the training set and use them in our benchmark. The testing set of RCTW is not used as the text labels are not available. 
 - **ReCTS** [2] provides 25,000 annotated street-view Chinese text images, mainly derived from natural signboards. We only adopt the training set and crop 107,657 text samples in total for our benchmark. 
@@ -39,13 +39,13 @@ We first collect the publicly available scene datasets including **RCTW**, **ReC
 
 We combine all the subdatasets, resulting in 636,455 text samples. We randomly shuffle these samples and split them at a ratio of 8:1:1, leading to 509,164 samples for training, 63,645 samples for validation, and 63,646 samples for testing. 
 
-### Web Setting
+### Web Dataset
 To collect the web dataset, we utilize **MTWI [6]** that contains 20,000 Chinese and English web text images from 17 different categories on the Taobao website. The text samples are appeared in various scenes, typography and designs. We derive 140,589 text images from the training set, and manually divide them at a ratio of 8:1:1, resulting in 112,471 samples for training, 14,059 samples for validation, and 14,059 samples for testing.
 
-### Document Setting
+### Document Dataset
 We use the public repository **Text Render [7]** to generate some document-style synthetic text images. More specifically, we uniformly sample the length of text varying from 1 to 15. The corpus comes from wiki, films, amazon, and baike. The dataset contains 500,000 in total and is randomly divided into training, validation, and testing sets with a proportion of 8:1:1 (400,000 v.s. 50,000 v.s. 50,000).
 
-### Handwriting Setting
+### Handwriting Dataset
 We collect the handwriting dataset based on **SCUT-HCCDoc [8]**, which captures the Chinese handwritten image with cameras in unconstrained environments. Following the official settings, we derive 93,254 text lines for training and 23,389 for testing, respectively. To pursue more rigorous research, we manually split the original training set into two sets at a ratio of 4:1, resulting in 74,603 samples for training and 18,651 samples for validation. For convenience, we continue to use the original 23,389 samples for testing.
 
 Overall, the amount of text samples for each dataset is shown as follows:
@@ -74,7 +74,7 @@ Overall, the amount of text samples for each dataset is shown as follows:
     </tr>
     <tr>
         <td align="center">Testing</td>
-        <td align="center">63,645</td>
+        <td align="center">63,646</td>
         <td align="center">Testing</td>
         <td align="center">14,059</td>
     </tr>
@@ -84,13 +84,13 @@ Overall, the amount of text samples for each dataset is shown as follows:
         <td align="center">400,000</td>
         <td rowspan="3" align="center">Handwriting</td>
         <td align="center">Training</td>
-        <td align="center">80,000</td>
+        <td align="center">74,603</td>
     </tr>
     <tr>
         <td align="center">Validation</td>
         <td align="center">50,000</td>
         <td align="center">Validation</td>
-        <td align="center">13,254</td>
+        <td align="center">18,651</td>
     </tr>
     <tr>
         <td align="center">Testing</td>
@@ -116,7 +116,7 @@ Overall, the amount of text samples for each dataset is shown as follows:
         <th align="center">&nbsp;Handwriting&nbsp;</th>
     </tr>
     <tr>
-        <td align="center">CRNN [11]</td>
+        <td align="center">CRNN [9]</td>
         <td align="center">TPAMI</td>
         <td align="center">2016</td>
         <td align="center"><a href="./predictions/CRNN/CRNN_scene.txt" style="color:black;">52.8</a></td>
@@ -125,7 +125,7 @@ Overall, the amount of text samples for each dataset is shown as follows:
         <td align="center">ing</td>
     </tr>
     <tr>
-        <td align="center">ASTER [x]</td>
+        <td align="center">ASTER [10]</td>
         <td align="center">TPAMI</td>
         <td align="center">2018</td>
         <td align="center"><a href="./predictions/ASTER/ASTER_scene.txt" style="color:black;">54.1</a></td>
@@ -134,7 +134,7 @@ Overall, the amount of text samples for each dataset is shown as follows:
         <td align="center">ing</td>
     </tr>
     <tr>
-        <td align="center">MORAN [12]</td>
+        <td align="center">MORAN [11]</td>
         <td align="center">PR</td>
         <td align="center">2019</td>
         <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt" style="color:black;">51.3</a></td>
@@ -143,7 +143,7 @@ Overall, the amount of text samples for each dataset is shown as follows:
         <td align="center"><a href="./predictions/MORAN/MORAN_handwriting.txt" style="color:black;">37.2</a></td>
     </tr>
     <tr>
-        <td align="center">SAR [x]</td>
+        <td align="center">SAR [12]</td>
         <td align="center">AAAI</td>
         <td align="center">2019</td>
         <td align="center"><a href="./predictions/SAR/SAR_scene.txt" style="color:black;">61.8</a></td>
@@ -169,6 +169,15 @@ Overall, the amount of text samples for each dataset is shown as follows:
         <td align="center"><a href="./predictions/SRN/SRN_document.txt" style="color:black;">96.1</a></td>
         <td align="center">ing</td>
     </tr>
+    <tr>
+        <td align="center">TransOCR [15]</td>
+        <td align="center">CVPR</td>
+        <td align="center">2021</td>
+        <td align="center"><a href="./predictions/SRN/SRN_scene.txt" style="color:black;">59.2</a></td>
+        <td align="center"><a href="./predictions/SRN/SRN_web.txt" style="color:black;">49.7</a></td>
+        <td align="center"><a href="./predictions/SRN/SRN_document.txt" style="color:black;">96.1</a></td>
+        <td align="center">ing</td>
+    </tr>
 </table>
 
 ## References
@@ -187,10 +196,6 @@ Overall, the amount of text samples for each dataset is shown as follows:
 [6] He M, Liu Y, Yang Z, et al. ICPR2018 contest on robust reading for multi-type web images. ICPR, 2018. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Web/%E3%80%90MTWI%E3%80%91(ICPR2018)ICPR2018%20Contest%20on%20Robust%20Reading%20for%20Multi-Type%20Web%20Images.pdf)
 
 [7] Zhang H, Liang L, Jin L. SCUT-HCCDoc: A new benchmark dataset of handwritten Chinese text in unconstrained camera-captured documents. Pattern Recognition, 2020. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Handwriting/%E3%80%90SCUT%E3%80%91(PR2020)SCUT-HCCDoc-%20A%20new%20benchmark%20dataset%20of%20handwritten%20Chinese%20text%20in%20unconstrained%20camera-captured%20documents.pdf)
-
-[8] Yin F, Wang Q F, Zhang X Y, et al. ICDAR 2013 Chinese handwriting recognition competition. ICDAR, 2013. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Handwriting/%E3%80%90ICDAR2013%E3%80%91(ICDAR2013)ICDAR%202013%20Chinese%20Handwriting%20Recognition%20Competition%20.pdf)
-
-[9] Liu C L, Yin F, Wang D H, et al. CASIA online and offline Chinese handwriting databases. ICDAR, 2011. [paper](https://github.com/FudanVI/benchmarking-chinese-text-recognition/blob/main/papers/Handwriting/%E3%80%90HWDB%E3%80%91(ICDAR2011)CASIA%20Online%20and%20Offline%20Chinese%20Handwriting%20Databases.pdf)
 
 [10] text_render: [https://github.com/Sanster/text_renderer](https://github.com/Sanster/text_renderer)
 

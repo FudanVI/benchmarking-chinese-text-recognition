@@ -223,14 +223,15 @@ Here are the results of the baselines on four datasets. ACC / NED follow the per
 [15] Chen J, Li B, Xue X. Scene Text Telescope: Text-Focused Scene Image Super-Resolution. CVPR, 2021.
 
 ## Citation
-Please consider citing this paper if you find it useful in your research. The bibtex-format citations of relevant datasets are at [link]().
+Please consider citing this paper if you find it useful in your research. The bibtex-format citations of relevant datasets are at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/bibtex).
 
 ```
 to be filled
 ```
 
 ## Acknowledgements
-
+We sincerely thank those researchers who collect the subdatasets. Besides, we would like to thank Teng Fu,
+Nanxing Meng, Ke Niu and Yingjie Geng for their feedbacks on this benchmark. 
 
 ## Copyright
 The team includes Jingye Chen, Haiyang Yu, Jianqi Ma, Mengnan Guan, Xixi Xu, Xiaocong Wang, and Shaobo Qu, advised by Prof. Bin Li and Prof. Xiangyang Xue.

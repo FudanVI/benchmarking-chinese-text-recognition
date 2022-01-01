@@ -208,7 +208,7 @@ Overall, the amount of text samples for each dataset is shown as follows:
 [15] Chen J, Li B, Xue X. Scene Text Telescope: Text-Focused Scene Image Super-Resolution. CVPR, 2021.
 
 ## Citation
-Please consider cite this paper if you find it useful in your research.
+Please consider citing this paper if you find it useful in your research.
 
 ```
 to be filled
@@ -218,7 +218,7 @@ to be filled
 
 
 ## Copyright
-The team includes Jingye Chen **(Leader)**, Mengnan Guan, Haiyang Yu, Shaobo Qu, Xiaocong Wang, Xixi Xu, and Jianqi Ma, advised by Prof. Bin Li and Prof. Xiangyang Xue.
+The team includes Jingye Chen, Haiyang Yu, Jianqi Ma, Mengnan Guan, Xixi Xu, Xiaocong Wang, and Shaobo Qu, advised by Prof. Bin Li and Prof. Xiangyang Xue.
 
 Copyright © 2021 Fudan-FudanVI. All Rights Reserved.
 

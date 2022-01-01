@@ -105,23 +105,23 @@ def tensor2str(tensor, args):
     return string
 
 def strQ2B(ustring):
-    rstring = ""
+    rstring = ''
     for uchar in ustring:
         inside_code=ord(uchar)
         if inside_code == 12288:
             inside_code = 32
-        elif (inside_code >= 65281 and inside_code <= 65374):
+        elif inside_code >= 65281 and inside_code <= 65374:
             inside_code -= 65248
         rstring += chr(inside_code)
     return rstring
 
 def equal(pred, gt):
-    pred = convert(strQ2B(pred.lower(), 'zh-hans'))
-    gt = convert(strQ2B(gt.lower()), 'zh-hans')
-    if(pred == gt):
-        return 'True'
+    pred = convert(strQ2B(pred.lower().replace(' ','')), 'zh-hans')
+    gt = convert(strQ2B(gt.lower().replace(' ','')), 'zh-hans')
+    if pred == gt:
+        return True
     else:
-        return 'False'
+        return False
 
 def saver(args):
     try:

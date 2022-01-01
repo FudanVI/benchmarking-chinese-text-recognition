@@ -119,7 +119,7 @@ def test(epoch):
                 pred = tensor2str(text_pred_list[i], args)
                 gt = tensor2str(text_gt_list[i], args)
 
-                if equal(pred, gt) == 'True':
+                if equal(pred, gt) == True:
                     correct += 1
                     state = True
                 total += 1

@@ -178,7 +178,6 @@ Here are the results of the baselines on four datasets. ACC / NED follow the per
         <td align="center"><a href="./predictions/SEED/SEED_web.txt">46.3 / 0.637</a></td>
         <td align="center"><a href="./predictions/SEED/SEED_document.txt">93.7 / 0.990</a></td>
         <td align="center"><a href="./predictions/SEED/SEED_handwriting.txt">32.1 / 0.674</a></td>
-        <td align="center">ing</td>
     </tr>
     <tr>
         <td align="center">TransOCR [15]</td>

@@ -118,7 +118,7 @@ We manually select seven representative methods as baselines, which will be intr
 
 * **TransOCR [15]** is one of the representative Transformer-based methods. It is originally designed to provide text priors for the super-resolution task. It employs ResNet-34 as the encoder and self-attention modules as the decoder. Distinct from the RNN-based decoders, the self-attention modules are more efficient to capture semantic features of the given text images.
 
-Here are the results of the baselines on four datasets. ACC / NED follow the percentage format and decimal format, respectively. 
+Here are the results of the baselines on four datasets. ACC / NED follow the percentage format and decimal format, respectively. Please click the hyperlinks to see the detailed experimental results, following the format of (*index* *[pred]* *[gt]*).
 <table><tbody>
     <tr>
         <th rowspan="2">&nbsp;&nbsp;Baseline&nbsp;&nbsp;</th>

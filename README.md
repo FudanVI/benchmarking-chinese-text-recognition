@@ -19,9 +19,9 @@ Nov 26, 2021: We upload the lmdb datasets publicly to Google Drive and BaiduClou
 ## Download
 * The *lmdb* scene, web and document datasets are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm) and [GoogleDrive](https://drive.google.com/drive/folders/1J-3klWJasVJTL32FOKaFXZykKwN6Wni5?usp=sharing).
 
-* For the handwriting setting, please first download it at [SCUT-HCCDoc](https://github.com/HCIILAB/SCUT-HCCDoc_Dataset_Release) and manually divide it into training, validation, and testing sets. Please transform three sets to *lmdb* formats following XXX.
+* For the handwriting setting, please first download it at [SCUT-HCCDoc](https://github.com/HCIILAB/SCUT-HCCDoc_Dataset_Release) and divide it into training, validation, and testing sets following XXX.
 
-Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make your own dataset.
+Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make the lmdb dataset.
 
 ## Datasets
 ![Alt text](./images/dataset.png)
@@ -223,7 +223,7 @@ Here are the results of the baselines on four datasets. ACC / NED follow the per
 [15] Chen J, Li B, Xue X. Scene Text Telescope: Text-Focused Scene Image Super-Resolution. CVPR, 2021.
 
 ## Citation
-Please consider citing this paper if you find it useful in your research. The bibtex-format citations of relevant datasets are at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/bibtex).
+Please consider citing this paper if you find it useful in your research. The bibtex-format citations of all relevant datasets and baselines are at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/bibtex).
 
 ```
 to be filled

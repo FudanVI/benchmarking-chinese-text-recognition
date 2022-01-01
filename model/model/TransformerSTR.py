@@ -13,7 +13,7 @@ class Transformer(nn.Module):
         alphabet = get_alphabet(args)
         self.word_n_class = len(alphabet)
         self.pe = PositionalEncoding(d_model=512, dropout=0.1, max_len=7000)
-        self.encoder = ResNet(num_in=3, block=BasicBlock, layers=[3,4,6,3]).cuda()
+        self.encoder = ResNet(num_in=3, block=BasicBlock, layers=[3,4,6,3], args).cuda()
 
         self.decoder = Decoder()
 

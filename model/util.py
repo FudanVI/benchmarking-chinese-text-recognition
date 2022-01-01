@@ -4,6 +4,7 @@ import os
 import shutil
 from shutil import copyfile
 from torch.utils.data import Dataset
+from zhconv import convert
 
 #----------alphabet----------
 def get_alp2num(args):
@@ -102,6 +103,25 @@ def tensor2str(tensor, args):
             continue
         string += alphabet[i]
     return string
+
+def strQ2B(ustring):
+    rstring = ""
+    for uchar in ustring:
+        inside_code=ord(uchar)
+        if inside_code == 12288:
+            inside_code = 32
+        elif (inside_code >= 65281 and inside_code <= 65374):
+            inside_code -= 65248
+        rstring += chr(inside_code)
+    return rstring
+
+def equal(pred, gt):
+    pred = convert(strQ2B(pred.lower(), 'zh-hans'))
+    gt = convert(strQ2B(gt.lower()), 'zh-hans')
+    if(pred == gt):
+        return 'True'
+    else:
+        return 'False'
 
 def saver(args):
     try:

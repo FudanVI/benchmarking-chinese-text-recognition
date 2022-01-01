@@ -55,7 +55,7 @@ class BasicBlock(nn.Module):
 
 
 class ResNet(nn.Module):
-    def __init__(self, num_in, block, layers):
+    def __init__(self, num_in, block, layers, args):
         super(ResNet, self).__init__()
 
         self.conv1 = nn.Conv2d(num_in, 64, kernel_size=3, stride=1, padding=1)
@@ -91,6 +91,8 @@ class ResNet(nn.Module):
         self.layer4_conv2_bn = nn.BatchNorm2d(1024)
         self.layer4_conv2_relu = nn.ReLU(inplace=True)
 
+        self.args = args
+
     def _make_layer(self, block, inplanes, planes, blocks):
         if inplanes != planes:
             downsample = nn.Sequential(
@@ -116,25 +118,29 @@ class ResNet(nn.Module):
         x = self.bn2(x)
         x = self.relu2(x)
 
-        # x = self.layer1_pool(x)
+        if self.args.scenario == 'Document' or self.args.scenario == 'Handwriting':
+            x = self.layer1_pool(x)
         x = self.layer1(x)
         x = self.layer1_conv(x)
         x = self.layer1_bn(x)
         x = self.layer1_relu(x)
 
-        # x = self.layer2_pool(x)
+        if self.args.scenario == 'Document' or self.args.scenario == 'Handwriting':
+            x = self.layer2_pool(x)
         x = self.layer2(x)
         x = self.layer2_conv(x)
         x = self.layer2_bn(x)
         x = self.layer2_relu(x)
 
-        # x = self.layer3_pool(x)
+        if self.args.scenario == 'Document' or self.args.scenario == 'Handwriting':
+            x = self.layer3_pool(x)
         x = self.layer3(x)
         x = self.layer3_conv(x)
         x = self.layer3_bn(x)
         x = self.layer3_relu(x)
 
-        # x = self.layer4_pool(x)
+        if self.args.scenario == 'Document' or self.args.scenario == 'Handwriting':
+            x = self.layer4_pool(x)
         x = self.layer4(x)
         x = self.layer4_conv2(x)
         x = self.layer4_conv2_bn(x)

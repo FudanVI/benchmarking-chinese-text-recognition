@@ -9,7 +9,7 @@ from torch.utils.tensorboard import SummaryWriter
 from args import args
 from model.TransformerSTR import Transformer
 from util import get_data_package, converter, tensor2str, \
-    saver, get_alphabet
+    saver, get_alphabet, equal
 
 #-------ignore the warning information-------
 warnings.filterwarnings("ignore")
@@ -119,7 +119,7 @@ def test(epoch):
                 pred = tensor2str(text_pred_list[i], args)
                 gt = tensor2str(text_gt_list[i], args)
 
-                if pred == gt:
+                if equal(pred, gt) == 'True':
                     correct += 1
                     state = True
                 total += 1

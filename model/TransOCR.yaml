@@ -1,4 +1,4 @@
-name: TransformerSTR
+name: TransOCR
 channels:
   - defaults
 dependencies:
@@ -52,5 +52,6 @@ dependencies:
     - typing-extensions==4.0.1
     - urllib3==1.26.7
     - werkzeug==2.0.2
+    - zhconv==1.4.3
     - zipp==3.6.0
 

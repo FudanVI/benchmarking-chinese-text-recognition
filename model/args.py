@@ -15,5 +15,6 @@ parser.add_argument('--imageH', type=int, default=64, help='the height of the in
 parser.add_argument('--imageW', type=int, default=200, help='the width of the input image to network')
 parser.add_argument('--alpha_path', default='', help='path to alphabet')
 parser.add_argument('--max_len', type=int, default=100, help='the max length of model prediction')
+parser.add_argument('--scenario', type=str, required=True, choices=['Web', 'Scene', 'Document', 'Handwriting'], help='the type of scenario')
 
 args = parser.parse_args()

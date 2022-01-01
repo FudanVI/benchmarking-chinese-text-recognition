@@ -15,6 +15,8 @@ parser.add_argument('--imageW', type=int, default=200, help='the width of the in
 parser.add_argument('--alpha_path', default='', help='path to alphabet')
 parser.add_argument('--max_len', type=int, default=100, help='the max length of model prediction')
 parser.add_argument('--image_path', default='', help='path to image')
+parser.add_argument('--scenario', type=str, required=True, choices=['Web', 'Scene', 'Document', 'Handwriting'], help='the type of scenario')
+
 args = parser.parse_args()
 
 #get the alphabet

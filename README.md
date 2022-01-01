@@ -102,6 +102,23 @@ Overall, the amount of text samples for each dataset is shown as follows:
 
 
 ## Baselines
+We manually select seven representative methods as baselines, which will be introduced as follows.
+
+* **CRNN [9]** is a typical CTC-based method and it is widely used in academia and industry. It first sends the text image to a CNN to extract the image features, then adopts a two-layer LSTM to encode the sequential features. Finally, the output of LSTM is fed to a CTC (Connectionist Temperal Classification) decoder to maximize the probability of all the paths towards the ground truth. 
+
+* **ASTER [10]** is a typical rectification-based method aiming at tackling irregular text images. It introduces a Spatial Transformer Network (STN) to rectify the given text image into a more recognizable appearance. Then the rectified text image is sent to a CNN and a two-layer LSTM to extract the features. In particular, ASTER takes advantage of the attention mechanism to predict the final text sequence. 
+
+* **MORAN [11]** is a representative rectification-based method. It first adopts a multi-object rectification network (MORN) to predict rectified pixel offsets in a weak supervision way (distinct from ASTER that utilizes STN). The output pixel offsets are further used for generating the rectified image, which is further sent to the attention-based decoder (ASRN) for text recognition.
+
+* **SAR [12]** is a representative method that takes advantage of 2-D feature maps for more robust decoding. In particular, it is mainly proposed to tackle irregular texts. On one hand, SAR adopts more powerful residual blocks in the CNN encoder for learning stronger image representation. On the other hand, different from CRNN, ASTER, and MORAN compressing the given image into a 1-D feature map, SAR adopts 2-D attention on the spatial dimension of the feature maps for decoding, resulting in a stronger performance in curved and oblique texts.
+
+* **SRN [13]** is a representative semantics-based method that utilizes self-attention modules to correct the errors of predictions. It proposes a parallel visual attention module followed by a self-attention network to capture the global semantic features through multi-way parallel transmission, resulting in significant performance improvement towards the recognition of irregular texts. 
+
+* **SEED [14]** is a representative semantics-based method. It introduces a semantics module to extract global semantics embedding and utilize it to initialize the first hidden state of the decoder. Specifically, while inheriting the structure of ASTER, the decoder of SEED intakes the semantic embedding to provide prior for the recognition process, thus showing superiority in recognizing low-quality text images.
+
+* **TransOCR [15]** is one of the representative Transformer-based methods. It is originally designed to provide text priors for the super-resolution task. It employs ResNet-34 as the encoder and self-attention modules as the decoder. Distinct from the RNN-based decoders, the self-attention modules are more efficient to capture semantic features of the given text images.
+
+Here are the results of the baselines on four datasets. ACC / NED follow the percentage format and decimal format, respectively. 
 <table><tbody>
     <tr>
         <th rowspan="2">&nbsp;&nbsp;Baseline&nbsp;&nbsp;</th>
@@ -117,58 +134,59 @@ Overall, the amount of text samples for each dataset is shown as follows:
     <tr>
         <td align="center">CRNN [9]</td>
         <td align="center">2016</td>
-        <td align="center"><a href="./predictions/CRNN/CRNN_scene.txt" style="color:black;">52.8</a></td>
-        <td align="center"><a href="./predictions/CRNN/CRNN_web.txt" style="color:black;">54.1</a></td>
-        <td align="center"><a href="./predictions/CRNN/CRNN_document.txt" style="color:black;">93.4</a></td>
-        <td align="center">ing</td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_scene.txt" >53.4 / 0.734</a></td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_web.txt" >54.5 / 0.736</a></td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_document.txt">97.5 / 0.994</a></td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_handwriting.txt">46.4 / 0.840</a></td>
     </tr>
     <tr>
         <td align="center">ASTER [10]</td>
         <td align="center">2018</td>
-        <td align="center"><a href="./predictions/ASTER/ASTER_scene.txt" style="color:black;">54.1</a></td>
-        <td align="center"><a href="./predictions/ASTER/ASTER_web.txt" style="color:black;">52.0</a></td>
-        <td align="center"><a href="./predictions/ASTER/ASTER_document.txt" style="color:black;">92.9</a></td>
-        <td align="center">ing</td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_scene.txt">54.5 / 0.695</a></td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_web.txt">52.3 / 0.689</a></td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_document.txt">93.1 / 0.989</a></td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_handwriting.txt">46.4 / 0.840</a></td>
     </tr>
     <tr>
         <td align="center">MORAN [11]</td>
         <td align="center">2019</td>
-        <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt" style="color:black;">51.3</a></td>
-        <td align="center"><a href="./predictions/MORAN/MORAN_web.txt" style="color:black;">49.6</a></td>
-        <td align="center"><a href="./predictions/MORAN/MORAN_document.txt" style="color:black;">95.6</a></td>
-        <td align="center"><a href="./predictions/MORAN/MORAN_handwriting.txt" style="color:black;">37.2</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt">51.8 / 0.686</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_web.txt">49.9 / 0.682</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_document.txt">95.8 / 0.991</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_handwriting.txt">39.7 / 0.761</a></td>
     </tr>
     <tr>
         <td align="center">SAR [12]</td>
         <td align="center">2019</td>
-        <td align="center"><a href="./predictions/SAR/SAR_scene.txt" style="color:black;">61.8</a></td>
-        <td align="center"><a href="./predictions/SAR/SAR_web.txt" style="color:black;">54.0</a></td>
-        <td align="center">ing</td>
-        <td align="center">ing</td>
+        <td align="center"><a href="./predictions/SAR/SAR_scene.txt">62.5 / 0.785</a></td>
+        <td align="center"><a href="./predictions/SAR/SAR_web.txt">54.3 / 0.725</a></td>
+        <td align="center"><a href="./predictions/SAR/SAR_document.txt">93.8 / 0.987</a></td>
+        <td align="center"><a href="./predictions/SAR/SAR_handwriting.txt" >31.4 / 0.655</a></td>
     </tr>
     <tr>
-        <td align="center">SEED [13]</td>
+        <td align="center">SRN [13]</td>
         <td align="center">2020</td>
-        <td align="center"><a href="./predictions/SEED/SEED_scene.txt" style="color:black;">49.2</a></td>
-        <td align="center"><a href="./predictions/SEED/SEED_web.txt" style="color:black;">46.0</a></td>
-        <td align="center"><a href="./predictions/SEED/SEED_document.txt" style="color:black;">93.6</a></td>
-        <td align="center">ing</td>
+        <td align="center"><a href="./predictions/SRN/SRN_scene.txt">60.1 / 0.778</a></td>
+        <td align="center"><a href="./predictions/SRN/SRN_web.txt">52.3 / 0.706</a></td>
+        <td align="center"><a href="./predictions/SRN/SRN_document.txt">96.7 / 0.995</a></td>
+        <td align="center"><a href="./predictions/SRN/SRN_handwriting.txt">18.0 / 0.512</a></td>
     </tr>
     <tr>
-        <td align="center">SRN [14]</td>
+        <td align="center">SEED [14]</td>
         <td align="center">2020</td>
-        <td align="center"><a href="./predictions/SRN/SRN_scene.txt" style="color:black;">59.2</a></td>
-        <td align="center"><a href="./predictions/SRN/SRN_web.txt" style="color:black;">49.7</a></td>
-        <td align="center"><a href="./predictions/SRN/SRN_document.txt" style="color:black;">96.1</a></td>
+        <td align="center"><a href="./predictions/SEED/SEED_scene.txt">49.6 / 0.661</a></td>
+        <td align="center"><a href="./predictions/SEED/SEED_web.txt">46.3 / 0.637</a></td>
+        <td align="center"><a href="./predictions/SEED/SEED_document.txt">93.7 / 0.990</a></td>
+        <td align="center"><a href="./predictions/SEED/SEED_handwriting.txt">32.1 / 0.674</a></td>
         <td align="center">ing</td>
     </tr>
     <tr>
         <td align="center">TransOCR [15]</td>
         <td align="center">2021</td>
-        <td align="center"><a href="./predictions/SRN/SRN_scene.txt" style="color:black;">59.2</a></td>
-        <td align="center"><a href="./predictions/SRN/SRN_web.txt" style="color:black;">49.7</a></td>
-        <td align="center"><a href="./predictions/SRN/SRN_document.txt" style="color:black;">96.1</a></td>
-        <td align="center">ing</td>
+        <td align="center"><a href="./predictions/TransOCR/TransOCR_scene.txt">63.3 / 0.802</a></td>
+        <td align="center"><a href="./predictions/TransOCR/TransOCR_web.txt">62.3 / 0.787</a></td>
+        <td align="center"><a href="./predictions/TransOCR/TransOCR_document.txt">96.9 / 0.994</a></td>
+        <td align="center"><a href="./predictions/TransOCR/TransOCR_handwriting.txt">53.4 / 0.849</a></td>
     </tr>
 </table>
 
@@ -201,9 +219,9 @@ Overall, the amount of text samples for each dataset is shown as follows:
 
 [12] Li H, Wang P, Shen C, et al. Show, attend and read: A simple and strong baseline for irregular text recognition. AAAI, 2019.
 
-[13] Qiao Z, Zhou Y, Yang D, et al. Seed: Semantics enhanced encoder-decoder framework for scene text recognition. CVPR, 2020.
+[13] Yu D, Li X, Zhang C, et al. Towards accurate scene text recognition with semantic reasoning networks. CVPR, 2020.
 
-[14] Yu D, Li X, Zhang C, et al. Towards accurate scene text recognition with semantic reasoning networks. CVPR, 2020.
+[14] Qiao Z, Zhou Y, Yang D, et al. Seed: Semantics enhanced encoder-decoder framework for scene text recognition. CVPR, 2020.
 
 [15] Chen J, Li B, Xue X. Scene Text Telescope: Text-Focused Scene Image Super-Resolution. CVPR, 2021.
 

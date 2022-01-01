@@ -79,6 +79,6 @@ class resizeNormalize(object):
         img.sub_(0.5).div_(0.5)
         return img
 
-if __name__ == '__main__':
-    dataset = lmdbDataset('root of dataset')
-    print(f'Length of dataset {len(dataset)}')
+# if __name__ == '__main__':
+#     dataset = lmdbDataset('root of dataset')
+#     print(f'Length of dataset {len(dataset)}')

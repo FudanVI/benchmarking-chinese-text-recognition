@@ -7,14 +7,12 @@ This repository contains datasets and baselines for benchmarking Chinese text re
 ## Highlights
 :star2: All datasets are transformed to lmdb format for convenient usage.
 
-:star2: The experimental results of all baselines are available and stored in txt format.
+:star2: The experimental results of all baselines are available at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/predictions) with format (*index* *[pred]* *[gt]*).
 
-:star2: The code and trained weights of TransOCR (one of the baselines) are available for direct use.
+:star2: The code and trained weights of TransOCR (one of the baselines) are available at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/model) for direct use.
 
 ## Updates
-Jan 1, 2022: This repo is made publicly available.
-
-Nov 31, 2021: The paper is submitted to arXiv. 
+Jan 2, 2022: This repo is made publicly available.
 
 Nov 26, 2021: We upload the lmdb datasets publicly to Google Drive and BaiduCloud.
 
@@ -225,7 +223,7 @@ Here are the results of the baselines on four datasets. ACC / NED follow the per
 [15] Chen J, Li B, Xue X. Scene Text Telescope: Text-Focused Scene Image Super-Resolution. CVPR, 2021.
 
 ## Citation
-Please consider citing this paper if you find it useful in your research.
+Please consider citing this paper if you find it useful in your research. The bibtex-format citations of relevant datasets are at [link]().
 
 ```
 to be filled

@@ -19,9 +19,7 @@ Nov 26, 2021: We upload the lmdb datasets publicly to Google Drive and BaiduClou
 ## Download
 * The *lmdb* scene, web and document datasets are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm) and [GoogleDrive](https://drive.google.com/drive/folders/1J-3klWJasVJTL32FOKaFXZykKwN6Wni5?usp=sharing).
 
-* For the handwriting setting, please first download it at [SCUT-HCCDoc](https://github.com/HCIILAB/SCUT-HCCDoc_Dataset_Release) and divide it into training, validation, and testing sets following XXX.
-
-Please use ```data/lmdbReader.py``` and ```data/lmdbMaker.py``` to read or make the lmdb dataset.
+* For the handwriting setting, please first download it at [SCUT-HCCDoc](https://github.com/HCIILAB/SCUT-HCCDoc_Dataset_Release) and divide it into training, validation, and testing sets following [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/data).
 
 ## Datasets
 ![Alt text](./images/dataset.png)

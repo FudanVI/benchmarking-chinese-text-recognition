@@ -13,7 +13,7 @@ Please note that ```gt.txt``` is stored in ```{save_path}/train_image```,```{sav
 ```python
 lines = open('.../gt.txt', 'r').readlines() # Line 87
 
-createDataset('./root_to_generate'.format(), imgList, labelList) # Line 104
+createDataset('./path_for_saving_lmdb'.format(), imgList, labelList) # Line 104
 ```
 4. Use ```lmdbReader.py``` to examine the generated lmdb-format datasets.
 

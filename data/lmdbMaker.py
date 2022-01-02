@@ -101,5 +101,5 @@ if __name__ == '__main__':
     print("The length of the list is ", len(imgList))
 
     '''Input the address you want to generate the lmdb file.'''
-    createDataset('./root_to_generate'.format(), imgList, labelList)
+    createDataset('./path_for_saving_lmdb'.format(), imgList, labelList)
 

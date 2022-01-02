@@ -84,7 +84,7 @@ def createDataset(outputPath, imagePathList, labelList, lexiconList=None, checkV
 
 
 def get_mydataset():
-    lines = open('.../label.txt', 'r').readlines()
+    lines = open('.../gt.txt', 'r').readlines()
     image_list = []
     label_list = []
     for line in lines:
@@ -97,7 +97,7 @@ def get_mydataset():
 
 
 if __name__ == '__main__':
-    imgList, labelList = get_scut_train()
+    imgList, labelList = get_mydataset()
     print("The length of the list is ", len(imgList))
 
     '''Input the address you want to generate the lmdb file.'''

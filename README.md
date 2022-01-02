@@ -230,7 +230,7 @@ to be filled
 ```
 
 ## Acknowledgements
-We sincerely thank those researchers who collect the subdatasets. Besides, we would like to thank Teng Fu,
+We sincerely thank those researchers who collect the subdatasets for Chinese text recognition. Besides, we would like to thank Teng Fu,
 Nanxing Meng, Ke Niu and Yingjie Geng for their feedbacks on this benchmark. 
 
 ## Copyright

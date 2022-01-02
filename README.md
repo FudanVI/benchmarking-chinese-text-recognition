@@ -12,7 +12,7 @@ This repository contains datasets and baselines for benchmarking Chinese text re
 :star2: The code and trained weights of TransOCR (one of the baselines) are available at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/model) for direct use.
 
 ## Updates
-Jan 2, 2022: This repo is made publicly available.
+Jan 3, 2022: This repo is made publicly available.
 
 Nov 26, 2021: We upload the lmdb datasets publicly to Google Drive and BaiduCloud.
 

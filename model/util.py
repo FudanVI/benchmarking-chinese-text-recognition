@@ -104,7 +104,7 @@ def tensor2str(tensor, args):
         string += alphabet[i]
     return string
 
-def strQ2B(ustring):
+def full2half(ustring):
     rstring = ''
     for uchar in ustring:
         inside_code=ord(uchar)
@@ -116,8 +116,8 @@ def strQ2B(ustring):
     return rstring
 
 def equal(pred, gt):
-    pred = convert(strQ2B(pred.lower().replace(' ','')), 'zh-hans')
-    gt = convert(strQ2B(gt.lower().replace(' ','')), 'zh-hans')
+    pred = convert(full2half(pred.lower().replace(' ','')), 'zh-hans')
+    gt = convert(full2half(gt.lower().replace(' ','')), 'zh-hans')
     if pred == gt:
         return True
     else:

@@ -118,28 +118,28 @@ class ResNet(nn.Module):
         x = self.bn2(x)
         x = self.relu2(x)
 
-        if self.args.scenario == 'Document' or self.args.scenario == 'Handwriting':
+        if self.args.dataset == 'Document' or self.args.dataset == 'Handwriting':
             x = self.layer1_pool(x)
         x = self.layer1(x)
         x = self.layer1_conv(x)
         x = self.layer1_bn(x)
         x = self.layer1_relu(x)
 
-        if self.args.scenario == 'Document' or self.args.scenario == 'Handwriting':
+        if self.args.dataset == 'Document' or self.args.dataset == 'Handwriting':
             x = self.layer2_pool(x)
         x = self.layer2(x)
         x = self.layer2_conv(x)
         x = self.layer2_bn(x)
         x = self.layer2_relu(x)
 
-        if self.args.scenario == 'Document' or self.args.scenario == 'Handwriting':
+        if self.args.dataset == 'Document' or self.args.dataset == 'Handwriting':
             x = self.layer3_pool(x)
         x = self.layer3(x)
         x = self.layer3_conv(x)
         x = self.layer3_bn(x)
         x = self.layer3_relu(x)
 
-        if self.args.scenario == 'Document' or self.args.scenario == 'Handwriting':
+        if self.args.dataset == 'Document' or self.args.dataset == 'Handwriting':
             x = self.layer4_pool(x)
         x = self.layer4(x)
         x = self.layer4_conv2(x)

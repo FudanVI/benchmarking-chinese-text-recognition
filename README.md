@@ -2,7 +2,7 @@
 ![](https://img.shields.io/badge/Team-FudanVI-red) ![](https://img.shields.io/badge/Maintained-Yes-green) ![](https://img.shields.io/badge/License-MIT-blue)
 
 
-This repository contains datasets and baselines for benchmarking Chinese text recognition. Please see the corresponding [paper]() for more details regarding the datasets, baselines, the empirical study, etc.
+This repository contains datasets and baselines for benchmarking Chinese text recognition. Please see the corresponding [paper](https://arxiv.org/abs/2112.15093) for more details regarding the datasets, baselines, the empirical study, etc.
 
 ## Highlights
 :star2: All datasets are transformed to lmdb format for convenient usage.
@@ -12,7 +12,7 @@ This repository contains datasets and baselines for benchmarking Chinese text re
 :star2: The code and trained weights of TransOCR (one of the baselines) are available at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/model) for direct use.
 
 ## Updates
-Jan 3, 2022: This repo is made publicly available.
+Jan 3, 2022: This repo is made publicly available. The corresponding paper is available at arXiv.
 
 Nov 26, 2021: We upload the lmdb datasets publicly to Google Drive and BaiduCloud.
 

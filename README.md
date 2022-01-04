@@ -21,7 +21,7 @@ Nov 26, 2021: We upload the lmdb datasets publicly to Google Drive and BaiduClou
 
 * For the handwriting setting, please first download it at [SCUT-HCCDoc](https://github.com/HCIILAB/SCUT-HCCDoc_Dataset_Release) and divide it into training, validation, and testing sets following [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/data).
 
-* We also collected HWDB2.0-2.2 and ICDAR2013 handwriting datasets from [CASIA](http://www.nlpr.ia.ac.cn/databases/handwriting/Download.html) and ICDAR2013 competition for futher research. Datasets are available at [BaiduCloud](https://pan.baidu.com/s/1q_x3L1lZBRykoY-AwhtoXw) (psw:lfaq) and [GoogleDrive](https://drive.google.com/drive/folders/1_xLYnEtoVo-RvPL9m79f0HgERwtR1Wc-?usp=sharing)
+* We also collected HWDB2.0-2.2 and ICDAR2013 handwriting datasets from [CASIA](http://www.nlpr.ia.ac.cn/databases/handwriting/Download.html) and ICDAR2013 competition for futher research. Datasets are available at [BaiduCloud](https://pan.baidu.com/s/1q_x3L1lZBRykoY-AwhtoXw) (psw:lfaq) and [GoogleDrive](https://drive.google.com/drive/folders/1_xLYnEtoVo-RvPL9m79f0HgERwtR1Wc-?usp=sharing).
 
 ## Datasets
 ![Alt text](./images/dataset.png)

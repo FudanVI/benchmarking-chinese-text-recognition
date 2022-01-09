@@ -226,7 +226,12 @@ Here are the results of the baselines on four datasets. ACC / NED follow the per
 Please consider citing this paper if you find it useful in your research. The bibtex-format citations of all relevant datasets and baselines are at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/bibtex).
 
 ```
-to be filled
+@article{chen2021benchmarking,
+  title={Benchmarking Chinese Text Recognition: Datasets, Baselines, and an Empirical Study},
+  author={Chen, Jingye and Yu, Haiyang and Ma, Jianqi and Guan, Mengnan and Xu, Xixi and Wang, Xiaocong and Qu, Shaobo and Li, Bin and Xue, Xiangyang},
+  journal={arXiv preprint arXiv:2112.15093},
+  year={2021}
+}
 ```
 
 ## Acknowledgements

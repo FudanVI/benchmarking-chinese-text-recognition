@@ -9,7 +9,7 @@ conda env create -f TransOCR.yaml
 ```
 
 ## Pre-trained Model
-Download the trained weights for each dataset at [BaiduYunDisk](https://pan.baidu.com/s/1SGuFrmNvim259FcwmuCyog) with password: qaiu and [GoogleDrive](https://drive.google.com/drive/folders/1j8mijsRfhfnj_-4fJ7hEU5HMf9RbaZ94?usp=sharing)
+Download the trained weights for each dataset at [BaiduYunDisk](https://pan.baidu.com/s/1SGuFrmNvim259FcwmuCyog) with password: qaiu and [GoogleDrive](https://drive.google.com/drive/folders/1tcbDwXoo8SwKU5xbKSYccoclFhkbG2CT?usp=sharing)
 
 
 ## Training

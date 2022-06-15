@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=GPU_NUM python main.py --train --trainroot=PATH_TO_TRAINING_DATASET	--valroot=PATH_TO_VAL_DATASET --experiment=EXPERIMENTAL_NAME --radical=0

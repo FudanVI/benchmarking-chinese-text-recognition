@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=GPU_NUM python main.py --test	--testroot=PATH_TO_TESTING_DATASET	--weight=PATH_TO_CHECKPOINTS	--experiment=EXPERIMENTAL_NAME

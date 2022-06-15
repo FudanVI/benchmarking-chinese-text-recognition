@@ -9,9 +9,11 @@ This repository contains datasets and baselines for benchmarking Chinese text re
 
 :star2: The experimental results of all baselines are available at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/predictions) with format (*index* *[pred]* *[gt]*).
 
-:star2: The code and trained weights of TransOCR (one of the baselines) are available at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/model) for direct use.
+:star2: The code and trained weights of all baselines are available at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/model) for direct use.
 
 ## Updates
+Jun 15, 2022: The experimental settings are modified. We upload the code and trained weights of all baselines.
+
 Jan 3, 2022: This repo is made publicly available. The corresponding paper is available at arXiv.
 
 Nov 26, 2021: We upload the lmdb datasets publicly to Google Drive and BaiduCloud.
@@ -100,7 +102,7 @@ Overall, the amount of text samples for each dataset is shown as follows:
 
 
 ## Baselines
-We manually select seven representative methods as baselines, which will be introduced as follows.
+We manually select six representative methods as baselines, which will be introduced as follows.
 
 * **CRNN [9]** is a typical CTC-based method and it is widely used in academia and industry. It first sends the text image to a CNN to extract the image features, then adopts a two-layer LSTM to encode the sequential features. Finally, the output of LSTM is fed to a CTC (Connectionist Temperal Classification) decoder to maximize the probability of all the paths towards the ground truth. 
 
@@ -110,11 +112,9 @@ We manually select seven representative methods as baselines, which will be intr
 
 * **SAR [12]** is a representative method that takes advantage of 2-D feature maps for more robust decoding. In particular, it is mainly proposed to tackle irregular texts. On one hand, SAR adopts more powerful residual blocks in the CNN encoder for learning stronger image representation. On the other hand, different from CRNN, ASTER, and MORAN compressing the given image into a 1-D feature map, SAR adopts 2-D attention on the spatial dimension of the feature maps for decoding, resulting in a stronger performance in curved and oblique texts.
 
-* **SRN [13]** is a representative semantics-based method that utilizes self-attention modules to correct the errors of predictions. It proposes a parallel visual attention module followed by a self-attention network to capture the global semantic features through multi-way parallel transmission, resulting in significant performance improvement towards the recognition of irregular texts. 
+* **SEED [13]** is a representative semantics-based method. It introduces a semantics module to extract global semantics embedding and utilize it to initialize the first hidden state of the decoder. Specifically, while inheriting the structure of ASTER, the decoder of SEED intakes the semantic embedding to provide prior for the recognition process, thus showing superiority in recognizing low-quality text images.
 
-* **SEED [14]** is a representative semantics-based method. It introduces a semantics module to extract global semantics embedding and utilize it to initialize the first hidden state of the decoder. Specifically, while inheriting the structure of ASTER, the decoder of SEED intakes the semantic embedding to provide prior for the recognition process, thus showing superiority in recognizing low-quality text images.
-
-* **TransOCR [15]** is one of the representative Transformer-based methods. It is originally designed to provide text priors for the super-resolution task. It employs ResNet-34 as the encoder and self-attention modules as the decoder. Distinct from the RNN-based decoders, the self-attention modules are more efficient to capture semantic features of the given text images.
+* **TransOCR [14]** is one of the representative Transformer-based methods. It is originally designed to provide text priors for the super-resolution task. It employs ResNet-34 as the encoder and self-attention modules as the decoder. Distinct from the RNN-based decoders, the self-attention modules are more efficient to capture semantic features of the given text images.
 
 Here are the results of the baselines on four datasets. ACC / NED follow the percentage format and decimal format, respectively. Please click the hyperlinks to see the detailed experimental results, following the format of (*index* *[pred]* *[gt]*).
 <table><tbody>
@@ -216,11 +216,9 @@ Here are the results of the baselines on four datasets. ACC / NED follow the per
 
 [12] Li H, Wang P, Shen C, et al. Show, attend and read: A simple and strong baseline for irregular text recognition. AAAI, 2019.
 
-[13] Yu D, Li X, Zhang C, et al. Towards accurate scene text recognition with semantic reasoning networks. CVPR, 2020.
+[13] Qiao Z, Zhou Y, Yang D, et al. Seed: Semantics enhanced encoder-decoder framework for scene text recognition. CVPR, 2020.
 
-[14] Qiao Z, Zhou Y, Yang D, et al. Seed: Semantics enhanced encoder-decoder framework for scene text recognition. CVPR, 2020.
-
-[15] Chen J, Li B, Xue X. Scene Text Telescope: Text-Focused Scene Image Super-Resolution. CVPR, 2021.
+[14] Chen J, Li B, Xue X. Scene Text Telescope: Text-Focused Scene Image Super-Resolution. CVPR, 2021.
 
 ## Citation
 Please consider citing this paper if you find it useful in your research. The bibtex-format citations of all relevant datasets and baselines are at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/bibtex).

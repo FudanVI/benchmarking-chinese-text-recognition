@@ -1,30 +1,29 @@
-# TransOCR
-
-This is the code for TransOCR proposed in "Scene Text Telescope: Text-Focused Scene Image Super-Resolution", CVPR2021.
+# Baseline
+We manually select six representative methods as baselines and refer to the following off-the-shelf PyTorch implementations to complete all experiments.
+* CRNN: https://github.com/meijieru/crnn.pytorch
+* ASTER: https://github.com/ayumiymk/aster.pytorch
+* MORAN: https://github.com/Canjie-Luo/MORAN_v2
+* SAR: https://github.com/liuch37/sar-pytorch
+* SEED: https://github.com/Pay20Y/SEED
+* TransOCR: https://github.com/FudanVI/FudanOCR/tree/main/scene-text-telescope
 
 ## Dependencies
-Create an environment with the configuration file "TransOCR.yaml"
+Use the configuration file "model_name.yaml" to create the environment of the corresponding baseline. When creating the environment for CRNN, the [warp_ctc_pytorch](https://github.com/SeanNaren/warp-ctc/tree/pytorch_bindings/pytorch_binding) should be installed additionally.
 ```python
-conda env create -f TransOCR.yaml
+conda env create -f model_name/model_name.yaml
 ```
 
 ## Pre-trained Model
-Download the trained weights for each dataset at [BaiduYunDisk](https://pan.baidu.com/s/1SGuFrmNvim259FcwmuCyog) with password: qaiu and [GoogleDrive](https://drive.google.com/drive/folders/1tcbDwXoo8SwKU5xbKSYccoclFhkbG2CT?usp=sharig)
-
+Download the trained weights of each baseline at [GoogleDrive](https://drive.google.com/drive/folders/14v3hHhq4AOVEYY1hQfA1d1vI2HtZQZey?usp=sharing)
 
 ## Training
-Use the following command for training. Please remember to modify the experiment name.
+Use the following command for training. Please remember to modify the parameters (*e.g.*, the path to training datasets, the experimental name, etc.).
 ```python
-CUDA_VISIBLE_DEVICES=GPU_NUM python train.py --train_dataset Path_to_Training_Dataset --test_dataset Path_to_Testing_Dataset --alpha_path Path_to_Alphabet_File --exp_name EXP_NAME --dataset TYPE_OF_DATASET
+sh model_name/train.sh
 ```
 
-We set the input size of scene, web, document, handwriting datasets to 64×200, 64×200, 64×800, 64×1200. Therefore, the proper input size should be set when testing the corresponding dataset. Please note that only the first maxpooling layer is used in web and scene datasets while all maxpooling layers are used in document and handwriting datasets.
 ## Testing
+Use the following command for testing.
 ```python
-CUDA_VISIBLE_DEVICES=GPU_NUM python train.py --test_dataset Path_to_Test_Dataset --imageH Height_of_Input_Image --imageW Width_of_Input_Image --alpha_path Path_to_Alphabet_File --exp_name EXP_NAME --resume YOUR_MODEL --dataset TYPE_OF_DATASET --test_only
-```
-
-## Demo
-```python
-CUDA_VISIBLE_DEVICES=GPU_NUM python demo.py --image_path Path_to_Testing_Image --imageH Height_of_Input_Image --imageW Width_of_Input_Image --alpha_path Path_to_Alphabet_File --resume YOUR_MODEL --dataset TYPE_OF_DATASET
+sh model_name/test.sh
 ```

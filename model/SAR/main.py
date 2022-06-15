@@ -1,3 +1,4 @@
+from collections import OrderedDict
 from torch.multiprocessing import freeze_support
 import argparse
 import math
@@ -126,18 +127,14 @@ def converter(label, max_length):
     return length, text_input, text_all, length_radical, radical_input, radical_all, string_label
 
 
-def dictionary_generator(alphabet_path, END='END', PADDING='PAD', UNKNOWN='UNK'):
+def dictionary_generator(alphabet, END='END', PADDING='PAD', UNKNOWN='UNK'):
     '''
     END: end of sentence token
     PADDING: padding token
     UNKNOWN: unknown character token
     '''
     
-    f = open(alphabet_path, 'rb')
-    voc_list = f.read()
-    f.close()
-    
-    voc = list(voc_list.decode('utf-8'))
+    voc = list(alphabet)
     
     # update the voc with 3 specifical chars
     voc.append(END)
@@ -183,6 +180,34 @@ if __name__ == '__main__':
     voc_list = f.read()
     f.close()
     alphabet = voc_list.decode('utf-8')
+    
+    # compatibility modification
+    if opt.weight != '':
+        if opt.gpu:
+            state_dict = torch.load(opt.weight)
+        else:
+            state_dict = torch.load(opt.weight, map_location='cpu')
+        state_dict_rename = OrderedDict()
+        for k, v in state_dict.items():
+            name = k.replace("module.", "")
+            state_dict_rename[name] = v
+        nclass = state_dict_rename['decoder_model.linear2.bias'].shape[0]
+        if nclass == 4409:
+            f = open('data/web.txt', 'rb')
+            voc_list = f.read()
+            f.close()
+            alphabet = voc_list.decode('utf-8')
+        elif nclass == 5902:
+            f = open('data/scene.txt', 'rb')
+            voc_list = f.read()
+            f.close()
+            alphabet = voc_list.decode('utf-8')
+        elif nclass == 4872:
+            f = open('data/document.txt', 'rb')
+            voc_list = f.read()
+            f.close()
+            alphabet = voc_list.decode('utf-8')
+    
     converter_sar = ut.strLabelConverter(alphabet)
     
     random.seed(opt.manualSeed)
@@ -209,7 +234,7 @@ if __name__ == '__main__':
     Channel = 3
     if opt.document:
         Channel = 1
-    voc, char2id, id2char = dictionary_generator(opt.alphabet)
+    voc, char2id, id2char = dictionary_generator(alphabet)
     output_classes = len(voc)
     print("Num of output classes is:", output_classes)
     embedding_dim = 512

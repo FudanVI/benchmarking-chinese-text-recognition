@@ -126,10 +126,11 @@ if __name__ == '__main__':
     optimizer = optim.Adadelta(crnn.parameters(), lr=args.lr, rho=0.9)
 
     train_dataset, test_dataset = get_data(args)
-    train_dataloader = torch.utils.data.DataLoader(
-        train_dataset, batch_size=args.batch_size, num_workers=4, shuffle=True, drop_last=False,
-        collate_fn=dataset.alignCollate(imgH=args.imageH, imgW=args.imageW)
-    )
+    if not args.test:
+        train_dataloader = torch.utils.data.DataLoader(
+            train_dataset, batch_size=args.batch_size, num_workers=4, shuffle=True, drop_last=False,
+            collate_fn=dataset.alignCollate(imgH=args.imageH, imgW=args.imageW)
+        )
 
     if args.resume != '':
         crnn.load_state_dict(torch.load(args.resume))

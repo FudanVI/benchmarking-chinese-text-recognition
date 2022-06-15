@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=GPU_NUM python main.py  --synthetic_train_data_dir=PATH_TO_TRAINING_DATASET  --test_data_dir=PATH_TO_TESTING_DATASET --batch_size=24 --workers=8  --height=32 --width=256 --arch=ResNet_ASTER --with_lstm --logs_dir=EXPERIMENTAL_NAME --real_logs_dir=./aster.pytorch --max_len=200 --resume=PATH_TO_CHECKPOINTS --radical

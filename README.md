@@ -162,15 +162,7 @@ Here are the results of the baselines on four datasets. ACC / NED follow the per
         <td align="center"><a href="./predictions/SAR/SAR_handwriting.txt" >31.4 / 0.655</a></td>
     </tr>
     <tr>
-        <td align="center">SRN [13]</td>
-        <td align="center">2020</td>
-        <td align="center"><a href="./predictions/SRN/SRN_scene.txt">60.1 / 0.778</a></td>
-        <td align="center"><a href="./predictions/SRN/SRN_web.txt">52.3 / 0.706</a></td>
-        <td align="center"><a href="./predictions/SRN/SRN_document.txt">96.7 / 0.995</a></td>
-        <td align="center"><a href="./predictions/SRN/SRN_handwriting.txt">18.0 / 0.512</a></td>
-    </tr>
-    <tr>
-        <td align="center">SEED [14]</td>
+        <td align="center">SEED [13]</td>
         <td align="center">2020</td>
         <td align="center"><a href="./predictions/SEED/SEED_scene.txt">49.6 / 0.661</a></td>
         <td align="center"><a href="./predictions/SEED/SEED_web.txt">46.3 / 0.637</a></td>
@@ -178,7 +170,7 @@ Here are the results of the baselines on four datasets. ACC / NED follow the per
         <td align="center"><a href="./predictions/SEED/SEED_handwriting.txt">32.1 / 0.674</a></td>
     </tr>
     <tr>
-        <td align="center">TransOCR [15]</td>
+        <td align="center">TransOCR [14]</td>
         <td align="center">2021</td>
         <td align="center"><a href="./predictions/TransOCR/TransOCR_scene.txt">63.3 / 0.802</a></td>
         <td align="center"><a href="./predictions/TransOCR/TransOCR_web.txt">62.3 / 0.787</a></td>

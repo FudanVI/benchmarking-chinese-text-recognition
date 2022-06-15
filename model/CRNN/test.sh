@@ -1,0 +1,1 @@
+CUDA_VISIBLE_DEVICES=GPU_NUM python main.py --test --exp_name=EXPERIMENTAL_NAME --test_dataset=PATH_TO_TESTING_DATASETS --resume=PRETRAINED_MODEL

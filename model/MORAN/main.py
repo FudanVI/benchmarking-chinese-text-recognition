@@ -190,6 +190,75 @@ if not torch.cuda.is_available():
 if torch.cuda.is_available() and not opt.cuda:
     print("WARNING: You have a CUDA device, so you should probably run with --cuda")
 
+# compatibility modification
+if opt.weight != '':
+    if opt.cuda:
+        state_dict = torch.load(opt.weight)
+    else:
+        state_dict = torch.load(opt.weight, map_location='cpu')
+    MORAN_state_dict_rename = OrderedDict()
+    for k, v in state_dict.items():
+        name = k.replace("module.", "")
+        MORAN_state_dict_rename[name] = v
+    nclass = MORAN_state_dict_rename['ASRN.attention.generator.bias'].shape[0]
+    if nclass == 4406:
+        f = open('data/web.txt', 'rb')
+        voc_list = f.read()
+        f.close()
+        alphabet = voc_list.decode('utf-8')
+    elif nclass == 5899:
+        f = open('data/scene.txt', 'rb')
+        voc_list = f.read()
+        f.close()
+        alphabet = voc_list.decode('utf-8')
+    elif nclass == 4869:
+        f = open('data/document.txt', 'rb')
+        voc_list = f.read()
+        f.close()
+        alphabet = voc_list.decode('utf-8')
+
+radical_state_dicts = {
+    "ASRN.radical_branch.attention_compress.weight": torch.zeros(1, 4), 
+    "ASRN.radical_branch.attention_compress.bias": torch.zeros(1), 
+    "ASRN.radical_branch.features_compress.weight": torch.zeros(64, 512, 1, 1), 
+    "ASRN.radical_branch.features_compress.bias": torch.zeros(64), 
+    "ASRN.radical_branch.embedding_radical.lut.weight": torch.zeros(nclass, 256), 
+    "ASRN.radical_branch.pe_radical.pe": torch.zeros(1, 8000, 256), 
+    "ASRN.radical_branch.decoder_radical.mask_multihead.linears.0.weight": torch.zeros(512, 512), 
+    "ASRN.radical_branch.decoder_radical.mask_multihead.linears.0.bias": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.mask_multihead.linears.1.weight": torch.zeros(512, 512), 
+    "ASRN.radical_branch.decoder_radical.mask_multihead.linears.1.bias": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.mask_multihead.linears.2.weight": torch.zeros(512, 512), 
+    "ASRN.radical_branch.decoder_radical.mask_multihead.linears.2.bias": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.mask_multihead.linears.3.weight": torch.zeros(512, 512), 
+    "ASRN.radical_branch.decoder_radical.mask_multihead.linears.3.bias": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.mask_multihead.compress_attention_linear.weight": torch.zeros(1, 4), 
+    "ASRN.radical_branch.decoder_radical.mask_multihead.compress_attention_linear.bias": torch.zeros(1), 
+    "ASRN.radical_branch.decoder_radical.mul_layernorm1.a_2": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.mul_layernorm1.b_2": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.multihead.linears.0.weight": torch.zeros(512, 512), 
+    "ASRN.radical_branch.decoder_radical.multihead.linears.0.bias": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.multihead.linears.1.weight": torch.zeros(512, 512), 
+    "ASRN.radical_branch.decoder_radical.multihead.linears.1.bias": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.multihead.linears.2.weight": torch.zeros(512, 512), 
+    "ASRN.radical_branch.decoder_radical.multihead.linears.2.bias": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.multihead.linears.3.weight": torch.zeros(512, 512), 
+    "ASRN.radical_branch.decoder_radical.multihead.linears.3.bias": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.multihead.compress_attention_linear.weight": torch.zeros(1, 4), 
+    "ASRN.radical_branch.decoder_radical.multihead.compress_attention_linear.bias": torch.zeros(1), 
+    "ASRN.radical_branch.decoder_radical.mul_layernorm2.a_2": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.mul_layernorm2.b_2": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.pff.w_1.weight": torch.zeros(1024, 512), 
+    "ASRN.radical_branch.decoder_radical.pff.w_1.bias": torch.zeros(1024), 
+    "ASRN.radical_branch.decoder_radical.pff.w_2.weight": torch.zeros(512, 1024), 
+    "ASRN.radical_branch.decoder_radical.pff.w_2.bias": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.mul_layernorm3.a_2": torch.zeros(512), 
+    "ASRN.radical_branch.decoder_radical.mul_layernorm3.b_2": torch.zeros(512), 
+    "ASRN.radical_branch.generator_radical.proj.weight": torch.zeros(nclass, 512), 
+    "ASRN.radical_branch.generator_radical.proj.bias": torch.zeros(nclass)
+    }
+
+
 if opt.train:
     train_dataset = dataset.lmdbDataset(root=opt.trainroot, 
         transform=dataset.resizeNormalize((opt.imgW, opt.imgH)), reverse=False, alphabet=alphabet)
@@ -231,6 +300,9 @@ if opt.weight != '':
     for k, v in state_dict.items():
         name = k.replace("module.", "")
         MORAN_state_dict_rename[name] = v
+    if opt.test or opt.radical == 0:
+        for key in radical_state_dicts:
+            MORAN_state_dict_rename[key] = radical_state_dicts[key]
     MORAN.load_state_dict(MORAN_state_dict_rename, strict=True)
 
 image = torch.FloatTensor(opt.batch, nc, opt.imgH, opt.imgW)

@@ -132,50 +132,50 @@ Here are the results of the baselines on four datasets. ACC / NED follow the per
     <tr>
         <td align="center">CRNN [9]</td>
         <td align="center">2016</td>
-        <td align="center"><a href="./predictions/CRNN/CRNN_scene.txt" >53.4 / 0.734</a></td>
-        <td align="center"><a href="./predictions/CRNN/CRNN_web.txt" >54.5 / 0.736</a></td>
-        <td align="center"><a href="./predictions/CRNN/CRNN_document.txt">97.5 / 0.994</a></td>
-        <td align="center"><a href="./predictions/CRNN/CRNN_handwriting.txt">46.4 / 0.840</a></td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_scene.txt" >54.94 / 0.742</a></td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_web.txt" >56.21 / 0.745</a></td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_document.txt">97.41 / 0.995</a></td>
+        <td align="center"><a href="./predictions/CRNN/CRNN_handwriting.txt">48.04 / 0.843</a></td>
     </tr>
     <tr>
         <td align="center">ASTER [10]</td>
         <td align="center">2018</td>
-        <td align="center"><a href="./predictions/ASTER/ASTER_scene.txt">54.5 / 0.695</a></td>
-        <td align="center"><a href="./predictions/ASTER/ASTER_web.txt">52.3 / 0.689</a></td>
-        <td align="center"><a href="./predictions/ASTER/ASTER_document.txt">93.1 / 0.989</a></td>
-        <td align="center"><a href="./predictions/ASTER/ASTER_handwriting.txt">38.9 / 0.720</a></td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_scene.txt">59.37 / 0.801</a></td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_web.txt">57.83 / 0.782</a></td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_document.txt">97.59 / 0.995</a></td>
+        <td align="center"><a href="./predictions/ASTER/ASTER_handwriting.txt">45.90 / 0.819</a></td>
     </tr>
     <tr>
         <td align="center">MORAN [11]</td>
         <td align="center">2019</td>
-        <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt">51.8 / 0.686</a></td>
-        <td align="center"><a href="./predictions/MORAN/MORAN_web.txt">49.9 / 0.682</a></td>
-        <td align="center"><a href="./predictions/MORAN/MORAN_document.txt">95.8 / 0.991</a></td>
-        <td align="center"><a href="./predictions/MORAN/MORAN_handwriting.txt">39.7 / 0.761</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_scene.txt">54.68 / 0.710</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_web.txt">49.64 / 0.679</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_document.txt">91.66 / 0.984</a></td>
+        <td align="center"><a href="./predictions/MORAN/MORAN_handwriting.txt">30.24 / 0.651</a></td>
     </tr>
     <tr>
         <td align="center">SAR [12]</td>
         <td align="center">2019</td>
-        <td align="center"><a href="./predictions/SAR/SAR_scene.txt">62.5 / 0.785</a></td>
-        <td align="center"><a href="./predictions/SAR/SAR_web.txt">54.3 / 0.725</a></td>
-        <td align="center"><a href="./predictions/SAR/SAR_document.txt">93.8 / 0.987</a></td>
-        <td align="center"><a href="./predictions/SAR/SAR_handwriting.txt" >31.4 / 0.655</a></td>
+        <td align="center"><a href="./predictions/SAR/SAR_scene.txt">53.80 / 0.738</a></td>
+        <td align="center"><a href="./predictions/SAR/SAR_web.txt">50.49 / 0.705</a></td>
+        <td align="center"><a href="./predictions/SAR/SAR_document.txt">96.23 / 0.993</a></td>
+        <td align="center"><a href="./predictions/SAR/SAR_handwriting.txt" >30.95 / 0.732</a></td>
     </tr>
     <tr>
         <td align="center">SEED [13]</td>
         <td align="center">2020</td>
-        <td align="center"><a href="./predictions/SEED/SEED_scene.txt">49.6 / 0.661</a></td>
-        <td align="center"><a href="./predictions/SEED/SEED_web.txt">46.3 / 0.637</a></td>
-        <td align="center"><a href="./predictions/SEED/SEED_document.txt">93.7 / 0.990</a></td>
-        <td align="center"><a href="./predictions/SEED/SEED_handwriting.txt">32.1 / 0.674</a></td>
+        <td align="center"><a href="./predictions/SEED/SEED_scene.txt">45.37 / 0.708</a></td>
+        <td align="center"><a href="./predictions/SEED/SEED_web.txt">31.35 / 0.571</a></td>
+        <td align="center"><a href="./predictions/SEED/SEED_document.txt">96.08 / 0.992</a></td>
+        <td align="center"><a href="./predictions/SEED/SEED_handwriting.txt">21.10 / 0.555</a></td>
     </tr>
     <tr>
         <td align="center">TransOCR [14]</td>
         <td align="center">2021</td>
-        <td align="center"><a href="./predictions/TransOCR/TransOCR_scene.txt">63.3 / 0.802</a></td>
-        <td align="center"><a href="./predictions/TransOCR/TransOCR_web.txt">62.3 / 0.787</a></td>
-        <td align="center"><a href="./predictions/TransOCR/TransOCR_document.txt">96.9 / 0.994</a></td>
-        <td align="center"><a href="./predictions/TransOCR/TransOCR_handwriting.txt">53.4 / 0.849</a></td>
+        <td align="center"><a href="./predictions/TransOCR/TransOCR_scene.txt">67.81 / 0.817</a></td>
+        <td align="center"><a href="./predictions/TransOCR/TransOCR_web.txt">62.74 / 0.782</a></td>
+        <td align="center"><a href="./predictions/TransOCR/TransOCR_document.txt">97.86 / 0.996</a></td>
+        <td align="center"><a href="./predictions/TransOCR/TransOCR_handwriting.txt">51.67 / 0.835</a></td>
     </tr>
 </table>
 

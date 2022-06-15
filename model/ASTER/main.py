@@ -84,14 +84,21 @@ def main(args):
     args.height, args.width = (32, 100)
 
   if not args.evaluate:
-    train_dataset, train_loader = \
-      get_data(args.synthetic_train_data_dir, args.voc_type, args.max_len, args.num_train,
-               args.height, args.width, args.batch_size, args.workers, True, args.keep_ratio)
+    if args.test is False:
+        train_dataset, train_loader = \
+            get_data(args.synthetic_train_data_dir, args.voc_type, args.max_len, args.num_train,
+                     args.height, args.width, args.batch_size, args.workers, True, args.keep_ratio)
+    else:
+        train_dataset, train_loader = \
+            get_data(args.test_data_dir, args.voc_type, args.max_len, args.num_train,
+                     args.height, args.width, args.batch_size, args.workers, True, args.keep_ratio)
+
+
   test_dataset, test_loader = \
     get_data(args.test_data_dir, args.voc_type, args.max_len, args.num_test,
              args.height, args.width, args.batch_size, args.workers, False, args.keep_ratio)
 
-  if args.evaluate:
+  if  args.test is False:
     max_len = test_dataset.max_len
   else:
     max_len = max(train_dataset.max_len, test_dataset.max_len)

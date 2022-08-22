@@ -12,6 +12,8 @@ This repository contains datasets and baselines for benchmarking Chinese text re
 :star2: The code and trained weights of all baselines are available at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/model) for direct use.
 
 ## Updates
+Aug 22, 2022: We upload the lmdb datasets of hard cases.
+
 Jun 15, 2022: The experimental settings are modified. We upload the code and trained weights of all baselines.
 
 Jan 3, 2022: This repo is made publicly available. The corresponding paper is available at arXiv.
@@ -20,6 +22,8 @@ Nov 26, 2021: We upload the lmdb datasets publicly to Google Drive and BaiduClou
 
 ## Download
 * The *lmdb* scene, web and document datasets are available in [BaiduCloud](https://pan.baidu.com/s/1OlAAvSOUl8mA2WBzRC8RCg) (psw:v2rm) and [GoogleDrive](https://drive.google.com/drive/folders/1J-3klWJasVJTL32FOKaFXZykKwN6Wni5?usp=sharing).
+
+* The lmdb datasets of hard cases can be downloaded from [BaiduCloud](https://pan.baidu.com/s/1HjY_LuQPpBiol6Sc7noUDQ) (psw:n6nu) and [GoogleDrive](https://drive.google.com/drive/folders/1J-3klWJasVJTL32FOKaFXZykKwN6Wni5?usp=sharing).
 
 * For the handwriting setting, please first download it at [SCUT-HCCDoc](https://github.com/HCIILAB/SCUT-HCCDoc_Dataset_Release) and divide it into training, validation, and testing sets following [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/data).
 

@@ -12,6 +12,8 @@ This repository contains datasets and baselines for benchmarking Chinese text re
 :star2: The code and trained weights of all baselines are available at [link](https://github.com/FudanVI/benchmarking-chinese-text-recognition/tree/main/model) for direct use.
 
 ## Updates
+Dec 2, 2022: An updated version of the corresponding paper is available at arXiv.
+
 Aug 22, 2022: We upload the lmdb datasets of hard cases.
 
 Jun 15, 2022: The experimental settings are modified. We upload the code and trained weights of all baselines.
@@ -235,7 +237,7 @@ We sincerely thank those researchers who collect the subdatasets for Chinese tex
 Nanxing Meng, Ke Niu and Yingjie Geng for their feedbacks on this benchmark. 
 
 ## Copyright
-The team includes Jingye Chen, Haiyang Yu, Jianqi Ma, Mengnan Guan, Xixi Xu, Xiaocong Wang, and Shaobo Qu, advised by Prof. Bin Li and Prof. Xiangyang Xue.
+The team includes Jingye Chen, Haiyang Yu, Jianqi Ma, Mengnan Guan, Xixi Xu, Xiaocong Wang, and Shaobo Qu, advised by Prof. [Bin Li](https://aimpressionist.github.io) and Prof. Xiangyang Xue.
 
 Copyright © 2021 Fudan-FudanVI. All Rights Reserved.
 
